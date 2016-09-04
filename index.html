@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Enzo Muhlinghaus | Web Developer</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            setTimeout(function(){
+                $(".fadeInLeftBig").not("h1").removeClass("fadeInLeftBig").addClass("fadeOutRightBig");
+                setTimeout(function(){
+                    $('.longfazers').remove();
+                }, 500);
+            }, 5000);
+        });
+    </script>
+
+    </head>
+
+    <body>
+        <fly>
+            <div class="body animated fadeInLeftBig">
+            <span class="animated fadeInLeftBig">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+                <div class="base animated fadeInLeftBig">
+                    <span></span>
+                    <div class="face"></div>
+                </div>
+            </div>
+            <div class="longfazers">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h1 class="animated fadeInLeftBig">Enzo Muhlinghaus</h1>
+        </fly>
+    </body>
+</html>
