@@ -1,5 +1,5 @@
 /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
-@import url(http://fonts.googleapis.com/css?family=Advent+Pro:700);
+@import url(http://fonts.googleapis.com/css?family=Passion+One:700);
 
 body {
   background-repeat: no-repeat;
@@ -13,14 +13,13 @@ body {
   overflow: hidden;
 }
 h1 {
-    font-family: "Advent Pro";
+    font-family: 'Passion One', cursive;
     text-align: center;
-    color: #0f1c3a;
-    letter-spacing: 0.15em;
+    color: #ffffff;
+    letter-spacing: 0;
     font-weight: 700;
-    text-transform: uppercase;
     text-shadow: 0px 2px 3px #555;
-    font-size: 3.6em;
+    font-size: 5em;
     /*animation: fazer3 .2s linear infinite;*/
 }
 
