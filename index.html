@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html >
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
     <title>Enzo Muhlinghaus | Web Developer</title>
 
+    <meta name="description" content="Hey ! I’m a 20 years old student web developer based in Valence - France.">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/style.css">
 
     <script src="js/prefixfree.min.js"></script>
+    <script src="js/jquery-3.1.0.min.js"></script>
     <script src="js/index.js"></script>
-    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 
     <script>
         $(document).ready(function(){
             setTimeout(function(){
                 $(".fadeInLeftBig").not("h1").removeClass("fadeInLeftBig").addClass("fadeOutRightBig");
                 setTimeout(function(){
-                    $('.longfazers').remove();
+                    $('jet').remove();
+                    $('.top-bar').fadeIn();
                 }, 500);
             }, 3500);
         });
@@ -26,7 +34,7 @@
     </head>
 
     <body>
-        <fly>
+        <jet>
             <div class="body animated fadeInLeftBig">
             <span class="animated fadeInLeftBig">
                 <span></span>
@@ -34,10 +42,10 @@
                 <span></span>
                 <span></span>
             </span>
-                <div class="base animated fadeInLeftBig">
-                    <span></span>
-                    <div class="face"></div>
-                </div>
+            <div class="base animated fadeInLeftBig">
+                <span></span>
+                <div class="face"></div>
+            </div>
             </div>
             <div class="longfazers">
                 <span></span>
@@ -45,7 +53,15 @@
                 <span></span>
                 <span></span>
             </div>
-            <h1 class="animated fadeInLeftBig">Enzo Muhlinghaus</h1>
-        </fly>
+        </jet>
+        <nav class="top-bar" style="display: none">
+            <div class="logo">
+                <h2>
+                    <span>E</span>
+                    <span>M</span>
+                </h2>
+            </div>
+        </nav>
+        <h1 class="animated fadeInLeftBig">Enzo Muhlinghaus</h1>
     </body>
 </html>
