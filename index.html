@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
 
     <script src="js/prefixfree.min.js"></script>
     <script src="js/jquery-3.1.0.min.js"></script>
@@ -27,12 +28,15 @@
         $(document).ready(function(){
             setTimeout(function(){
                 $(".fadeInLeftBig").not("h1").removeClass("fadeInLeftBig").addClass("fadeOutRightBig");
-                $("h1.fadeInLeftBig").removeClass("fadeInLeftBig").addClass("fadeOutUp");
+                $("h1.fadeInDown").removeClass("fadeInDown").addClass("fadeOutUp");
                 setTimeout(function(){
                     $("h1#enzo").show().addClass("bounceInUp");
                     $('jet').remove();
-                    $('.top-bar').fadeIn();
-                    $('p.bio').fadeIn();
+//                    $('.top-bar').fadeIn();
+//                    $('div.bio').fadeIn();
+                    setTimeout(function(){
+                        $("span#clickme").show().addClass("lightSpeedIn");
+                    }, 1000);
                 }, 500);
             }, 3500);
         });
@@ -69,15 +73,18 @@
                 </h2>
             </div>
         </nav>
-        <h1 class="animated fadeInLeftBig">HI.</h1>
+        <h1 class="animated fadeInDown">HI.</h1>
         <h1 id="enzo" class="animated" style="display: none">I am Enzo.</h1>
-        <p class="bio">
-            Hey ! I’m a 20 years old web developer based in Valence - France.</p>
-        <p class="bio"
-            I'm currently in third year at the professional degree <a href="http://www.iut-valence.fr/lp-casir">CASIR</a> working in apprenticeship at <a href="http://www.batiactugroupe.com/fr">Batiactu Groupe</a>.
+        <span id="clickme" class="animated" style="display: none">Click me!</span>
+        <div class="bio">
+            <p>
+                Hey ! I’m a 20 years old web developer based in Valence - France.</p>
+            <p
+               I'm currently in third year at the professional degree <a href="http://www.iut-valence.fr/lp-casir">CASIR</a> working in apprenticeship at <a href="http://www.batiactugroupe.com/fr">Batiactu Groupe</a>.
             I’m using Magento in my work essentially but I've used Bootstrap, jQuery, Drupal... in my personal projects.
             I'm also learning Wordpress, AngularJS, Sass, Grunt & Gulp...</p>
-        <p class="bio">
-            You can download my resume <a href="CV.pdf">here</a> ! :)</p>
+            <p>
+                You can download my resume <a href="CV.pdf">here</a> ! :)</p>
+        </div>
     </body>
 </html>
