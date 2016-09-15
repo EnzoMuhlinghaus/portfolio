@@ -55,12 +55,16 @@ h1#enzo {
 
 div.bio{
     display: none;
-    font-size: 1.750em;
+    font-size: 1.550em;
     font-family: "futuraLight", arial, sans-serif;
     line-height: 190%;
-    width: 850px;
-    margin: 55px auto;
+    text-align: justify;
+    /*margin: 55px auto;*/
     color: #ffffff;
+}
+
+span#clickme:hover{
+    cursor: pointer;
 }
 
 span#clickme{
