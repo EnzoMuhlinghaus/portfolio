@@ -1,27 +1,64 @@
-/* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 @import url(https://fonts.googleapis.com/css?family=Give+You+Glory);
+
+@font-face {
+    font-family: 'journalregular';
+    src: url('fonts/journal/journal-webfont.eot');
+    src: url('fonts/journal/journal-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/journal/journal-webfont.woff') format('woff'),
+    url('fonts/journal/journal-webfont.ttf') format('truetype'),
+    url('fonts/journal/journal-webfont.svg#journalregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 html, body {
     /*font-family: 'Lato', sans-serif;*/
 }
 
+a{
+    color: #2f628e;
+}
+
+a:focus, a:hover {
+    color: #23527c;
+    text-decoration: none;
+}
+
 body {
     height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: fixed;
+}
+
+.page-block {
+    width:100%;
+    box-sizing:border-box;
+    height:100%;
+    overflow:hidden;
+}
+
+.page-block#intro{
     background: #2C90C5;
-     -webkit-transition: .7s ease-in-out, opacity .3s ease-in-out;
+    -webkit-transition: .7s ease-in-out, opacity .3s ease-in-out;
     -moz-transition: .7s ease-in-out, opacity .3s ease-in-out;
     -ms-transition: .7s ease-in-out, opacity .3s ease-in-out;
     -o-transition: .7s ease-in-out, opacity .3s ease-in-out;
-     transition: .7s ease-in-out, opacity .3s ease-in-out;
+    transition: .7s ease-in-out, opacity .3s ease-in-out;
     background-image: radial-gradient(center center, circle cover, #53AAD9, #2C90C5);
     background-image: -o-radial-gradient(center center, circle cover, #53AAD9, #2C90C5);
     background-image: -ms-radial-gradient(center center, circle cover, #53AAD9, #2C90C5);
     background-image: -moz-radial-gradient(center center, circle cover, #53AAD9, #2C90C5);
     background-image: -webkit-radial-gradient(center center, circle cover, #53AAD9, #2C90C5);
-    padding: 1em;
-    overflow: hidden;
+    height: 100vh;
 }
+
+.page-block#projects {
+    background:#21B17E;
+    padding-bottom:50px;
+}
+
 h2{
     text-align: center;
     color: #ffffff;
@@ -38,38 +75,206 @@ h1 {
     text-align: center;
     color: #ffffff;
     font-size: 5em;
-    /*animation: fazer3 .2s linear infinite;*/
+}
+
+h1.block-title{
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 55px;
+}
+
+h1#title{
+    text-transform: none;
+    text-align: left;
+    margin-bottom: 45px;
+    width: 125%;
+    font-size: 100px;
+    display: none;
 }
 
 h1#enzo {
-    top: 20%;
-    position: relative;
-    text-transform: uppercase;
-    font-family: "futuraBold", arial, sans-serif;
-    text-shadow: 0 1px 0 #1B597A;
-    font-weight: 700;
-    text-align: center;
-    color: #ffffff;
-    font-size: 7em;
+    display: none;
+    font-size: 8em;
+}
+
+div.container{
+    width: 50%;
+    margin: 55px auto;
 }
 
 div.bio{
-    display: none;
     font-size: 1.750em;
     font-family: "futuraLight", arial, sans-serif;
     line-height: 190%;
-    width: 850px;
-    margin: 55px auto;
     color: #ffffff;
+}
+
+div.bio p{
+    display: none;
 }
 
 span#clickme{
     display: block;
-    font-size: 44px;
-    font-family: 'Give You Glory', cursive;
+    font-size: 50px;
+    font-family: 'journalregular', cursive;
     color: #EFF8FC;
     position: relative;
+    left: 14%;
+}
+
+/* INTRO */
+
+.click-me-div {
+    position: absolute;
+    width: 770px;
+    text-align: center;
+    margin: -100px 0 0 -385px;
     left: 50%;
+    top: 45%;
+    color: #EFF8FC;
+    cursor: pointer;
+}
+
+/* ARROW SCROLLER */
+.scroll-block {
+    display: none;
+    position:absolute;
+    left:50%;
+    bottom:0;
+    margin:0 0 40px -39.5px;
+    width:80px;
+    opacity:0;
+    border:0;
+    height:60px;
+    outline:0;
+    background:none;
+}
+
+.scroll-block.active {
+    opacity:1;
+}
+
+.scroll-text {
+    font-size: 50px;
+    font-family: 'journalregular', cursive;
+    color: #EFF8FC;
+    position: absolute;
+    width: 100%;
+    top: -30px;
+    left: 0;
+    text-align: center;
+    -webkit-transition:.25s ease-in-out;
+    -moz-transition:.25s ease-in-out;
+    -ms-transition:.25s ease-in-out;
+    -o-transition:.25s ease-in-out;
+    transition:.25s ease-in-out;
+    opacity:0;
+}
+
+.scroll-block.active:hover .scroll-text {
+    -webkit-transform:translate3d(0,-25px, 0);
+    -moz-transform:translate3d(0,-25px, 0);
+    -ms-transform:translate3d(0,-25px, 0);
+    -o-transform:translate3d(0,-25px, 0);
+    transform:translate3d(0,-25px, 0);
+    opacity:1;
+}
+
+.scroller-arrow {
+    width:81px;
+    height:19px;
+    margin-left:auto;
+    margin-right:auto;
+    position:absolute;
+    top:0;
+    -webkit-animation: arrowPulse 1s ease-in-out infinite alternate;
+    -moz-animation: arrowPulse 1s ease-in-out infinite alternate;
+    -ms-animation: arrowPulse 1s ease-in-out infinite alternate;
+    animation: arrowPulse 1s ease-in-out infinite alternate;
+    margin-bottom:15px;
+}
+
+.scroller-arrow:before {
+    width: 45px;
+    background: #EFF8FC;
+    height: 4px;
+    content: '';
+    left: 0;
+    position: absolute;
+    -webkit-transform-origin: 0% 0%;
+    -moz-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    -o-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: rotate(27deg);
+    -moz-transform: rotate(27deg);
+    -ms-transform: rotate(27deg);
+    -o-transform: rotate(27deg);
+    transform: rotate(27deg);
+    border-radius: 3px;
+}
+
+.scroller-arrow:after {
+    width: 45px;
+    background: #EFF8FC;
+    height: 4px;
+    content: '';
+    right: 0;
+    position: absolute;
+    -webkit-transform-origin: 0% 0%;
+    -moz-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    -o-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: rotate(-27deg);
+    -moz-transform: rotate(-27deg);
+    -ms-transform: rotate(-27deg);
+    -o-transform: rotate(-27deg);
+    transform: rotate(-27deg);
+    border-radius: 3px;
+    top:20px;
+}
+
+
+@-webkit-keyframes arrowPulse {
+    from { opacity:1; }
+    to {
+        -webkit-transform:translate3d(0,30px,0);
+        opacity:0;
+    }
+}
+
+@-moz-keyframes arrowPulse {
+    from { opacity:1; }
+    to {
+        -moz-transform:translate3d(0,30px,0);
+        opacity:0;
+    }
+}
+
+@keyframes arrowPulse {
+    from { opacity:1; }
+    to {
+        transform:translate3d(0,30px,0);
+        opacity:0;
+    }
+}
+
+/* LITTLE SCREEN */
+@media only screen and (max-width: 850px) and (min-width: 0px) {
+    .click-me-div {
+        width: 400px;
+        margin: -50px 0 0 -200px;
+        text-align: center;
+    }
+
+    h1#enzo {
+        font-size: 4em;
+    }
+
+    h2, span#clickme{
+        font-size: 2em;
+    }
 }
 
 .top-bar {
