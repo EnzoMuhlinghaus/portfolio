@@ -4,11 +4,11 @@
 
 @font-face {
     font-family: 'journalregular';
-    src: url('fonts/journal/journal-webfont.eot');
-    src: url('fonts/journal/journal-webfont.eot?#iefix') format('embedded-opentype'),
-    url('fonts/journal/journal-webfont.woff') format('woff'),
-    url('fonts/journal/journal-webfont.ttf') format('truetype'),
-    url('fonts/journal/journal-webfont.svg#journalregular') format('svg');
+    src: url('../fonts/fonts/journal/journal-webfont.eot');
+    src: url('../fonts/fonts/journal/journal-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/fonts/journal/journal-webfont.woff') format('woff'),
+    url('../fonts/fonts/journal/journal-webfont.ttf') format('truetype'),
+    url('../fonts/fonts/journal/journal-webfont.svg#journalregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }

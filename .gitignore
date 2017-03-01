@@ -1,7 +1,7 @@
-# Created by .ignore support plugin (hsz.mobi)
-.idea
-.idea/workspace.xml
 /portfolio/nbproject/private/
 /nbproject/private/
 test
 test2
+dist
+.idea
+node_modules
