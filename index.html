@@ -7,7 +7,6 @@
     <title>Enzo Muhlinghaus | Web Developer</title>
 
     <meta name="description" content="Hey ! I’m a 20 year old student web developer based in Valence - France.">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Favicon -->
@@ -15,96 +14,73 @@
 
     <!-- build:css css/min.css -->
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!--<link rel="stylesheet" href="fonts/font-awesome-4.6.3/css/font-awesome.min.css">-->
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pace.css">
     <link rel="stylesheet" href="css/onepage-scroll.css">
+    <link rel="stylesheet" href="fonts/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <!-- endbuild -->
 
     </head>
 
     <body>
-        <!--<jet>-->
-            <!--<div class="body animated fadeInLeftBig">-->
-            <!--<span class="animated fadeInLeftBig">-->
-                <!--<span></span>-->
-                <!--<span></span>-->
-                <!--<span></span>-->
-                <!--<span></span>-->
-            <!--</span>-->
-            <!--<div class="base animated fadeInLeftBig">-->
-                <!--<span></span>-->
-                <!--<div class="face"></div>-->
-            <!--</div>-->
-            <!--</div>-->
-            <!--<div class="longfazers">-->
-                <!--<span></span>-->
-                <!--<span></span>-->
-                <!--<span></span>-->
-                <!--<span></span>-->
-            <!--</div>-->
-        <!--</jet>-->
+
+        <div class="intro">
+            <h1 class="animated fadeInDown">Hi.</h1>
+            <p id="welcome">Welcome to my personal portfolio.<br>Here you can find some of my work as a full stack developer.</p>
+            <p id="sign">Enzo Muhlinghaus</p>
+        </div>
+
+        <nav class="top-bar">
+            <div class="logo">
+                <h2>
+                    <span>E</span>
+                    <span style="margin-left: -10px;color: #7ac2ff;">M</span>
+                </h2>
+            </div>
+        </nav>
+
         <div class="main">
-            <section>
-                <div id="intro" class="page-block">
-                    <nav class="top-bar" style="display: none">
-                        <div class="logo">
-                            <h2>
-                                <span>E</span>
-                                <span style="margin-left: -10px;color: #2f628e;">M</span>
-                            </h2>
-                        </div>
-                    </nav>
-                    <h1 class="animated fadeInDown">HI.</h1>
-                    <div class="click-me-div">
-                        <h1 id="enzo">I am Enzo.</h1>
-                        <span id="clickme" style="display: none">Click me!</span>
+            <section class="page1">
+                <div class="container">
+                    <img src="https://api.adorable.io/avatars/285/abo%40e.io" alt="avatar">
+                    <div class="socials">
+                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                        <i class="fa fa-github-square" aria-hidden="true"></i>
+                        <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                        <i class="fa fa-envelope-square" aria-hidden="true"></i>
                     </div>
-                    <div class="container">
-                        <h1 class="block-title" id="title">Enzo Muhlinghaus</h1>
-
-                        <div class="bio">
-                            <p>
-                                Hey ! I’m a 20 year old web developer based in Valence - France.</p>
-                            <p>
-                                I'm currently in my third year of the professional degree <a href="http://www.iut-valence.fr/lp-casir">CASIR</a> working as an apprentice at <a href="http://www.batiactugroupe.com/fr">Batiactu Groupe</a>.
-                                I’m using Magento in my work essentially but I've used Bootstrap, jQuery, and a lot more in my personal projects.
-                                I'm also learning Wordpress, AngularJS, Sass, Grunt & Gulp...</p>
-                            <p>
-                                You can download my resume <a target="_blank" href="CV.pdf">here</a> ! :)</p>
-                        </div>
-
-                        <button id="arrow-pulser" class="scroll-block active">
-                            <span class="scroll-text">Scroll!</span>
-                            <div class="scroller-arrow"></div>
-                        </button>
-                    </div>
+                    <p>Hey ! I’m a 20 year old web developer based in Valence - France.</p>
+                    <p> I'm currently in my third year of the professional degree <a href="http://www.iut-valence.fr/lp-casir">CASIR</a> working as an apprentice at <a href="http://www.batiactugroupe.com/fr">Batiactu Groupe</a>.
+                        I’m using Magento in my work essentially but I've used Django, Ruby On Rails, Symfony, Laravel and a lot more in my personal / school projects.
+                        I'm also learning some front-end stuff like VueJs, Sass, Gulp...</p>
+                    <p>You can download my resume <a target="_blank" href="CV.pdf">here</a> ! :)</p>
                 </div>
+
+                <button id="arrow-pulser" class="scroll-block active">
+                    <span class="scroll-text">Scroll!</span>
+                    <div class="scroller-arrow"></div>
+                </button>
             </section>
-            <section>
-                <div id="projects" class="page-block">
-                    <div class="container">
-                        <h1 class="block-title">My Projects</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget rhoncus mauris. Nulla condimentum lacus sit amet justo pretium sollicitudin. Vestibulum imperdiet ultrices turpis sed semper. Fusce condimentum odio eu tincidunt tempor. Donec neque orci, interdum non ornare id, vehicula quis odio. Integer posuere mauris erat, nec accumsan libero consectetur ut. Maecenas porta, augue sed hendrerit dapibus, arcu mi ultricies odio, sed maximus metus est eu dui. Curabitur quis ipsum ornare urna bibendum faucibus. Cras massa arcu, hendrerit non sollicitudin in, tempor nec felis. Vestibulum ac magna malesuada tellus placerat mattis mollis rutrum eros. Praesent laoreet sollicitudin viverra. Nullam vehicula sem sed orci finibus venenatis. Mauris faucibus enim vitae blandit mollis. Nullam ullamcorper arcu erat, at eleifend purus gravida eu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-
-                            Nam sed vestibulum nibh. Praesent efficitur elit quis mauris sodales, et consectetur diam euismod. Cras id commodo ipsum. Nulla sed tortor volutpat, finibus odio in, aliquam diam. Pellentesque scelerisque, magna id pretium scelerisque, purus arcu pharetra nulla, non suscipit mauris est in ipsum. Fusce felis sem, porttitor ut pretium imperdiet, porta luctus eros. Aliquam lacus tortor, congue a ligula vitae, finibus interdum nisi. In egestas mauris nec libero luctus, eu fermentum orci fermentum. Aliquam congue, arcu sit amet porttitor congue, elit erat ornare lacus, ut tempor lectus lectus in enim. Nam rhoncus id metus et luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque lacus justo, euismod sed sem sit amet, ultrices lacinia purus.
-
-                            Ut sagittis sit amet urna sed consectetur. Pellentesque fringilla dolor et mauris interdum, at varius felis auctor. Donec nec ipsum dui. Suspendisse aliquam interdum diam, eu condimentum lacus blandit vitae. Vestibulum dictum rutrum semper. Quisque augue odio, consequat nec lacus non, finibus ornare nisl. Quisque sodales sagittis diam, vitae tempor mi dapibus in. Sed sed ante sed nibh convallis fermentum. Fusce pharetra, tortor ut congue ultrices, leo tellus tempus justo, at porttitor magna felis varius erat. In hac habitasse platea dictumst. Donec dui est, lacinia eu erat ut, blandit hendrerit elit. Ut sollicitudin a nibh sagittis vulputate. Curabitur ornare ac orci vel dapibus.
-
-                            Proin at pellentesque magna. Donec at scelerisque dui. Donec id faucibus leo. Aliquam nec sodales ex. Suspendisse eget purus sagittis nulla fringilla vulputate a vel ligula. Nulla facilisi. Cras leo massa, varius sed scelerisque in, pharetra at arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse ex diam, consectetur sed nulla eget, lacinia vestibulum diam. In congue vestibulum suscipit. Nulla ut sodales sem.
-
-                            Fusce non rhoncus odio. Vivamus rhoncus ultricies mi. Vestibulum ac elit felis. Mauris sollicitudin scelerisque semper. Nullam nec ex tincidunt, pharetra lacus eget, dictum sapien. Vestibulum odio felis, feugiat non risus nec, interdum semper augue. Fusce quis feugiat urna. Phasellus pulvinar id ipsum sed hendrerit.
-                        </p>
-                    </div>
+            <section class="page2">
+                <div id="projects">
+                    <h1>My Projects</h1>
+                    <!--<p>-->
+                        <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget rhoncus mauris. Nulla condimentum lacus sit amet justo pretium sollicitudin. Vestibulum imperdiet ultrices turpis sed semper. Fusce condimentum odio eu tincidunt tempor. Donec neque orci, interdum non ornare id, vehicula quis odio. Integer posuere mauris erat, nec accumsan libero consectetur ut. Maecenas porta, augue sed hendrerit dapibus, arcu mi ultricies odio, sed maximus metus est eu dui. Curabitur quis ipsum ornare urna bibendum faucibus. Cras massa arcu, hendrerit non sollicitudin in, tempor nec felis. Vestibulum ac magna malesuada tellus placerat mattis mollis rutrum eros. Praesent laoreet sollicitudin viverra. Nullam vehicula sem sed orci finibus venenatis. Mauris faucibus enim vitae blandit mollis. Nullam ullamcorper arcu erat, at eleifend purus gravida eu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;-->
+                        <!--Nam sed vestibulum nibh. Praesent efficitur elit quis mauris sodales, et consectetur diam euismod. Cras id commodo ipsum. Nulla sed tortor volutpat, finibus odio in, aliquam diam. Pellentesque scelerisque, magna id pretium scelerisque, purus arcu pharetra nulla, non suscipit mauris est in ipsum. Fusce felis sem, porttitor ut pretium imperdiet, porta luctus eros. Aliquam lacus tortor, congue a ligula vitae, finibus interdum nisi. In egestas mauris nec libero luctus, eu fermentum orci fermentum. Aliquam congue, arcu sit amet porttitor congue, elit erat ornare lacus, ut tempor lectus lectus in enim. Nam rhoncus id metus et luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque lacus justo, euismod sed sem sit amet, ultrices lacinia purus.-->
+                        <!--Ut sagittis sit amet urna sed consectetur. Pellentesque fringilla dolor et mauris interdum, at varius felis auctor. Donec nec ipsum dui. Suspendisse aliquam interdum diam, eu condimentum lacus blandit vitae. Vestibulum dictum rutrum semper. Quisque augue odio, consequat nec lacus non, finibus ornare nisl. Quisque sodales sagittis diam, vitae tempor mi dapibus in. Sed sed ante sed nibh convallis fermentum. Fusce pharetra, tortor ut congue ultrices, leo tellus tempus justo, at porttitor magna felis varius erat. In hac habitasse platea dictumst. Donec dui est, lacinia eu erat ut, blandit hendrerit elit. Ut sollicitudin a nibh sagittis vulputate. Curabitur ornare ac orci vel dapibus.-->
+                        <!--Proin at pellentesque magna. Donec at scelerisque dui. Donec id faucibus leo. Aliquam nec sodales ex. Suspendisse eget purus sagittis nulla fringilla vulputate a vel ligula. Nulla facilisi. Cras leo massa, varius sed scelerisque in, pharetra at arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse ex diam, consectetur sed nulla eget, lacinia vestibulum diam. In congue vestibulum suscipit. Nulla ut sodales sem.-->
+                        <!--Fusce non rhoncus odio. Vivamus rhoncus ultricies mi. Vestibulum ac elit felis. Mauris sollicitudin scelerisque semper. Nullam nec ex tincidunt, pharetra lacus eget, dictum sapien. Vestibulum odio felis, feugiat non risus nec, interdum semper augue. Fusce quis feugiat urna. Phasellus pulvinar id ipsum sed hendrerit.-->
+                    <!--</p>-->
                 </div>
             </section>
         </div>
 
         <!-- build:js js/min.js -->
-        <script src="js/prefixfree.min.js"></script>
         <script src="js/jquery-3.1.0.min.js"></script>
+        <script data-pace-options='{ "ajax": false }' src='js/pace.min.js'></script>
         <script src="js/main.js"></script>
         <script src="js/jquery.onepage-scroll.min.js"></script>
         <!-- endbuild -->

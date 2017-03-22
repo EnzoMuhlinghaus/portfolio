@@ -1,0 +1,205 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Give+You+Glory);
+@import url(https://fonts.googleapis.com/css?family=Muli);
+@font-face {
+  font-family: 'journalregular';
+  src: url("../fonts/fonts/journal/journal-webfont.eot");
+  src: url("../fonts/fonts/journal/journal-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fonts/journal/journal-webfont.woff") format("woff"), url("../fonts/fonts/journal/journal-webfont.ttf") format("truetype"), url("../fonts/fonts/journal/journal-webfont.svg#journalregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+html, body {
+  font-family: 'Muli', sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: -moz-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
+  background-image: -webkit-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
+  background-image: -o-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
+  background-image: -ms-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
+  background-image: radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
+  height: 100%;
+  overflow: hidden;
+  color: #ffffff; }
+  html a:hover, body a:hover {
+    text-decoration: underline;
+    cursor: pointer; }
+  html a, body a {
+    color: #7ac2ff;
+    text-decoration: none; }
+
+.main, #hi, .top-bar {
+  display: none; }
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column; }
+  .intro h1 {
+    color: #ffffff;
+    font-size: 3em; }
+  .intro p {
+    display: none;
+    color: #ffffff;
+    font-size: 1.5em; }
+    .intro p#welcome {
+      text-align: center; }
+    .intro p#sign {
+      font-family: 'journalregular', cursive;
+      margin-left: 20%;
+      font-size: 2.5em; }
+
+.top-bar {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 82px; }
+  .top-bar .logo {
+    float: right;
+    margin-top: -6px;
+    right: 60px;
+    position: relative; }
+    .top-bar .logo h2 {
+      font-size: 2em; }
+
+.main section.page1 .container {
+  font-size: 1.3em;
+  line-height: 190%;
+  width: 850px;
+  margin: 10px auto;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center; }
+  .main section.page1 .container img {
+    margin: 50px auto;
+    border-radius: 50%;
+    border: black 5px solid; }
+  .main section.page1 .container .socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    width: 30%; }
+    .main section.page1 .container .socials .fa {
+      font-size: 40px; }
+      .main section.page1 .container .socials .fa:hover {
+        color: #7ac2ff;
+        cursor: pointer; }
+
+.main section.page2 h1 {
+  font-size: 3.75em;
+  margin: 55px auto;
+  text-align: center; }
+
+/*------------------------------------*  Arrow Scroller
+\*------------------------------------*/
+.scroll-block {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin: 0 0 40px -39.5px;
+  width: 80px;
+  opacity: 0;
+  border: 0;
+  height: 60px;
+  outline: 0;
+  background: none; }
+  .scroll-block.active {
+    opacity: 1; }
+    .scroll-block.active:hover .scroll-text {
+      -webkit-transform: translate3d(0, -25px, 0);
+      -moz-transform: translate3d(0, -25px, 0);
+      -ms-transform: translate3d(0, -25px, 0);
+      -o-transform: translate3d(0, -25px, 0);
+      transform: translate3d(0, -25px, 0);
+      opacity: 1; }
+
+.scroll-text {
+  font-size: 50px;
+  font-family: 'journalregular', cursive;
+  color: #EFF8FC;
+  position: absolute;
+  width: 100%;
+  top: -30px;
+  left: 0;
+  text-align: center;
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -ms-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+  opacity: 0; }
+
+.scroller-arrow {
+  width: 81px;
+  height: 19px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 0;
+  -webkit-animation: arrowPulse 1s ease-in-out infinite alternate;
+  -moz-animation: arrowPulse 1s ease-in-out infinite alternate;
+  -ms-animation: arrowPulse 1s ease-in-out infinite alternate;
+  animation: arrowPulse 1s ease-in-out infinite alternate;
+  margin-bottom: 15px; }
+  .scroller-arrow:before {
+    width: 45px;
+    background: #EFF8FC;
+    height: 4px;
+    content: '';
+    left: 0;
+    position: absolute;
+    -webkit-transform-origin: 0% 0%;
+    -moz-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    -o-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: rotate(27deg);
+    -moz-transform: rotate(27deg);
+    -ms-transform: rotate(27deg);
+    -o-transform: rotate(27deg);
+    transform: rotate(27deg);
+    border-radius: 3px; }
+  .scroller-arrow:after {
+    width: 45px;
+    background: #EFF8FC;
+    height: 4px;
+    content: '';
+    right: 0;
+    position: absolute;
+    -webkit-transform-origin: 0% 0%;
+    -moz-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    -o-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: rotate(-27deg);
+    -moz-transform: rotate(-27deg);
+    -ms-transform: rotate(-27deg);
+    -o-transform: rotate(-27deg);
+    transform: rotate(-27deg);
+    border-radius: 3px;
+    top: 20px; }
+
+@-webkit-keyframes arrowPulse {
+  from {
+    opacity: 1; }
+  to {
+    -webkit-transform: translate3d(0, 30px, 0);
+    opacity: 0; } }
+
+@-moz-keyframes arrowPulse {
+  from {
+    opacity: 1; }
+  to {
+    -moz-transform: translate3d(0, 30px, 0);
+    opacity: 0; } }
+
+@keyframes arrowPulse {
+  from {
+    opacity: 1; }
+  to {
+    transform: translate3d(0, 30px, 0);
+    opacity: 0; } }
