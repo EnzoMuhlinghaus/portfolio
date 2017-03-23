@@ -17,6 +17,7 @@ setTimeout(function(){
         $(".intro p").fadeIn();
         setTimeout(function(){
             $('.top-bar').show().animateCss("fadeInRight");
+            $('.ribbon-wrap').fadeIn();
             $('#arrow-pulser').fadeIn();
             $('.onepage-pagination').show();
             $('section.page1').show();
@@ -46,8 +47,8 @@ setTimeout(function(){
 
 $(document).ready(function(){
 
-    $('#intro').on('click', '#arrow-pulser', function() {
-        $("html, body").animate({ scrollTop: $('#projects').offset().top }, 1000);
+    $('#arrow-pulser').on('click', function() {
+        $(".main").moveDown();
     });
 
 });
