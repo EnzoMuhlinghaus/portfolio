@@ -42,25 +42,27 @@ body, .onepage-wrapper, html {
   text-align: center;
 }
 .onepage-pagination li a{
-  padding: 10px;
-  width: 4px;
-  height: 4px;
+  padding: 5px 10px;
+  width: 10px;
   display: block;
   
 }
 .onepage-pagination li a:before{
-  content: "\f111";
-  font-family: FontAwesome;
+  content: "";
+  width: 10px;
+  height: 2px;
+  margin-top: 5px;
+  background: hsla(0,0%,100%,.7);
+  font-weight: 400;
+  font-size: 14px;
   position: absolute;
   font-size: 0.7em;
 }
 
 .onepage-pagination li a.active:before{
-  content: "\f10c";
-  font-family: FontAwesome;
-  font-size: 1em;
-  margin-top: -4px;
-  left: 8px;
+  width: 20px;
+  right: 5px;
+  transition: all .25s ease;
 }
 
 .disabled-onepage-scroll, .disabled-onepage-scroll .wrapper {

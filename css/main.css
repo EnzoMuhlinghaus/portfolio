@@ -27,28 +27,32 @@ html, body {
     color: #7ac2ff;
     text-decoration: none; }
 
-.main, #hi, .top-bar {
+#hi, .top-bar, section.page1, section.page2 {
   display: none; }
 
-.intro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  flex-direction: column; }
-  .intro h1 {
-    color: #ffffff;
-    font-size: 3em; }
-  .intro p {
-    display: none;
-    color: #ffffff;
-    font-size: 1.5em; }
-    .intro p#welcome {
-      text-align: center; }
-    .intro p#sign {
-      font-family: 'journalregular', cursive;
-      margin-left: 20%;
-      font-size: 2.5em; }
+.main {
+  height: 100%; }
+  .main section.page0 {
+    height: 100%; }
+    .main section.page0 .intro {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      flex-direction: column; }
+      .main section.page0 .intro h1 {
+        color: #ffffff;
+        font-size: 3em; }
+      .main section.page0 .intro p {
+        display: none;
+        color: #ffffff;
+        font-size: 1.7em; }
+        .main section.page0 .intro p#welcome {
+          text-align: center; }
+        .main section.page0 .intro p#sign {
+          font-family: 'journalregular', cursive;
+          margin-left: 20%;
+          font-size: 3.5em; }
 
 .top-bar {
   position: fixed;
@@ -81,7 +85,7 @@ html, body {
     align-items: center;
     justify-content: space-around;
     align-content: center;
-    width: 30%; }
+    width: 20%; }
     .main section.page1 .container .socials .fa {
       font-size: 40px; }
       .main section.page1 .container .socials .fa:hover {

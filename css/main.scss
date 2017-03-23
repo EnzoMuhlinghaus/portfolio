@@ -45,38 +45,47 @@ html, body{
   }
 }
 
-.main, #hi, .top-bar{
+#hi, .top-bar, section.page1, section.page2{
   display: none;
 }
 
-.intro{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height:100%;
-  flex-direction: column;
+.main{
+  height: 100%;
 
-  h1{
-    color: $blanc;
-    font-size: 3em;
-  }
+  section.page0{
+    height: 100%;
+    .intro{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height:100%;
+      flex-direction: column;
 
-  p{
-    display: none;
-    color: $blanc;
-    font-size: 1.5em;
+      h1{
+        color: $blanc;
+        font-size: 3em;
+      }
 
-    &#welcome{
-      text-align: center;
-    }
+      p{
+        display: none;
+        color: $blanc;
+        font-size: 1.7em;
 
-    &#sign{
-      font-family: 'journalregular', cursive;
-      margin-left: 20%;
-      font-size: 2.5em;
+        &#welcome{
+          text-align: center;
+        }
+
+        &#sign{
+          font-family: 'journalregular', cursive;
+          margin-left: 20%;
+          font-size: 3.5em;
+        }
+      }
     }
   }
 }
+
+
 
 .top-bar {
   position: fixed;
@@ -118,7 +127,7 @@ html, body{
       align-items: center;
       justify-content: space-around;
       align-content: center;
-      width: 30%;
+      width: 20%;
 
       .fa{
         font-size: 40px;
@@ -134,7 +143,6 @@ html, body{
 }
 
 .main section.page2 {
-
   h1{
     font-size: 3.75em;
     margin: 55px auto;
