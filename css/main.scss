@@ -16,21 +16,16 @@ $bleu : #7ac2ff;
   font-style: normal;
 }
 
-html, body{
+html{
   font-family: 'Muli', sans-serif;
-  //background: #04111a;
-  //background-image: radial-gradient(center center, circle cover, #04111a, #070809);
-  //background-image: -o-radial-gradient(center center, circle cover, #04111a, #070809);
-  //background-image: -ms-radial-gradient(center center, circle cover, #04111a, #070809);
-  //background-image: -moz-radial-gradient(center center, circle cover, #04111a, #070809);
-  //background-image: -webkit-radial-gradient(center center, circle cover, #04111a, #070809);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: -moz-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
-  background-image: -webkit-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
-  background-image: -o-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
-  background-image: -ms-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
-  background-image: radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
+  background: -moz-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
+  background: -o-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
+  background: radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
+  transition: background .5s linear;
   height: 100%;
   overflow: hidden;
   color: $blanc;
@@ -43,6 +38,34 @@ html, body{
     color: $bleu;
     text-decoration: none;
   }
+}
+
+body.pace-done{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background: -moz-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
+  background: -o-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
+  background: radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
+  transition: background .5s linear;
+}
+
+body.pace-running{
+  background: rgba(0, 0, 0, 0.71);
+  transition: background .5s linear;
+}
+
+.pace:before {
+  font-family: 'Muli', sans-serif;
+  content: "LOADING";
+  font-size: 1.5em;
+  color: #ffffff;
+  position: fixed;
+  display: block;
+  z-index: 99999;
+  bottom: 51%;
+  margin-left: 50px;
 }
 
 .ribbon-wrap {
