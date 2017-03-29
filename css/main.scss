@@ -25,7 +25,6 @@ html{
   background: -o-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
   background: -ms-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
   background: radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
-  transition: background .5s linear;
   height: 100%;
   overflow: hidden;
   color: $blanc;
@@ -41,19 +40,12 @@ html{
 }
 
 body.pace-done{
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background: -moz-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
-  background: -webkit-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
-  background: -o-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
-  background: -ms-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
-  background: radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
-  transition: background .5s linear;
+  background: transparent;
+  transition: background 2s linear;
 }
 
 body.pace-running{
   background: rgba(0, 0, 0, 0.71);
-  transition: background .5s linear;
 }
 
 .pace:before {
@@ -174,6 +166,7 @@ body.pace-running{
 }
 
 .main section.page1{
+  background: rgba(0, 0, 0, 0.71);
   .container{
     font-size: 1.3em;
     line-height: 190%;
