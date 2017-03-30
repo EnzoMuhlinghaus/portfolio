@@ -17,7 +17,6 @@ html {
   background: -o-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
   background: -ms-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
   background: radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
-  transition: background .5s linear;
   height: 100%;
   overflow: hidden;
   color: #ffffff; }
@@ -29,18 +28,11 @@ html {
     text-decoration: none; }
 
 body.pace-done {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background: -moz-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
-  background: -webkit-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
-  background: -o-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
-  background: -ms-radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
-  background: radial-gradient(center, ellipse cover, #506590 0%, #323368 100%);
-  transition: background .5s linear; }
+  background: transparent;
+  transition: background 2s linear; }
 
 body.pace-running {
-  background: rgba(0, 0, 0, 0.71);
-  transition: background .5s linear; }
+  background: rgba(0, 0, 0, 0.71); }
 
 .pace:before {
   font-family: 'Muli', sans-serif;
@@ -131,30 +123,32 @@ body.pace-running {
     .top-bar .logo h2 {
       font-size: 2em; }
 
-.main section.page1 .container {
-  font-size: 1.3em;
-  line-height: 190%;
-  width: 850px;
-  margin: 10px auto;
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center; }
-  .main section.page1 .container img {
-    margin: 50px auto;
-    border-radius: 50%;
-    border: black 5px solid; }
-  .main section.page1 .container .socials {
+.main section.page1 {
+  background: rgba(0, 0, 0, 0.71); }
+  .main section.page1 .container {
+    font-size: 1.3em;
+    line-height: 190%;
+    width: 850px;
+    margin: 10px auto;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    align-content: center;
-    width: 20%; }
-    .main section.page1 .container .socials .fa {
-      font-size: 40px; }
-      .main section.page1 .container .socials .fa:hover {
-        color: #7ac2ff;
-        cursor: pointer; }
+    flex-flow: column wrap;
+    align-items: center; }
+    .main section.page1 .container img {
+      margin: 50px auto;
+      border-radius: 50%;
+      border: black 5px solid; }
+    .main section.page1 .container .socials {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      align-content: center;
+      width: 20%; }
+      .main section.page1 .container .socials .fa {
+        font-size: 40px; }
+        .main section.page1 .container .socials .fa:hover {
+          color: #7ac2ff;
+          cursor: pointer; }
 
 .main section.page2 h1 {
   font-size: 3.75em;

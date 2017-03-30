@@ -19,7 +19,7 @@ Pace.on("hide", function () {
             $(".intro p").fadeIn();
             setTimeout(function(){
                 $('.top-bar').show().animateCss("fadeInRight");
-                $('.ribbon-wrap').fadeIn();
+                $('.ribbon-wrap').show().animateCss("flipInY");
                 $('#arrow-pulser').fadeIn();
                 $('.onepage-pagination').show();
                 $('section.page1').show();
@@ -52,6 +52,14 @@ $(document).ready(function(){
 
     $('#arrow-pulser').on('click', function() {
         $(".main").moveDown();
+    });
+
+    $(document).on("keydown", function (e) {
+        if(e.key == "ArrowDown" || e.key == "ArrowUp"){
+            var ribbon = $('.ribbon-wrap');
+            ribbon.animateCss("rollOut");
+            ribbon.fadeOut();
+        }
     });
 
 });
