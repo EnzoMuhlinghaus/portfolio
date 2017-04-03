@@ -45,44 +45,6 @@ body.pace-running {
   bottom: 51%;
   margin-left: 50px; }
 
-.ribbon-wrap {
-  display: none;
-  position: fixed;
-  left: -41px;
-  top: 49px;
-  width: 150px;
-  -ms-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  border-color: #a00;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
-  border-bottom: 30px solid #a00;
-  box-shadow: 0px 6px 5px -5px rgba(0, 0, 0, 0.5);
-  z-index: 999; }
-  .ribbon-wrap .trap-ribbon {
-    position: absolute;
-    left: -15px;
-    top: 2px;
-    border-bottom: 1px dotted rgba(255, 255, 255, 0.7);
-    width: 180px;
-    text-align: center; }
-    .ribbon-wrap .trap-ribbon a {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-      color: #d8d8d8;
-      text-decoration: none;
-      text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
-      text-align: center;
-      line-height: 22px;
-      display: inline-block;
-      border-top: 1px dotted rgba(255, 255, 255, 0.7);
-      transition: color 500ms ease; }
-      .ribbon-wrap .trap-ribbon a:hover {
-        color: #fff;
-        text-shadow: 0 1px rgba(0, 0, 0, 0.85); }
-
 #hi, .top-bar, section.page1, section.page2 {
   display: none; }
 
@@ -156,20 +118,20 @@ body.pace-running {
 
 .main section.page2 .mySkills {
   width: 850px;
-  margin: 10% auto;
+  margin: 3% auto;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between; }
+  flex-flow: column wrap;
+  height: 80%; }
   .main section.page2 .mySkills .skills {
     text-align: center;
     display: flex;
     flex-direction: column;
     width: 240px;
-    margin: auto; }
+    margin-bottom: 12px; }
     .main section.page2 .mySkills .skills h3 {
       margin: 15px 0; }
     .main section.page2 .mySkills .skills div {
-      background-color: #ffffff;
+      background-color: #373c6f;
       padding: 15px;
       margin-bottom: 15px;
       position: relative; }
