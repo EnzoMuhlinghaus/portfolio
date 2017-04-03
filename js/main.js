@@ -13,15 +13,12 @@ $.fn.extend({
 Pace.on("hide", function () {
     $("#hi").show().animateCss("fadeInDown");
     setTimeout(function(){
-        $("#hi").removeClass("fadeInDown").addClass("fadeOutUp");
+        $("#hi").removeClass("fadeInDown").addClass("animated fadeOutUp").fadeOut(500);
         setTimeout(function(){
-            $("#hi").remove();
-            $(".intro p").fadeIn();
+            $("#welcome, #sign").fadeIn();
             setTimeout(function(){
                 $('.top-bar').show().animateCss("fadeInRight");
-                $('.ribbon-wrap').show().animateCss("flipInY");
-                $('#arrow-pulser').fadeIn();
-                $('.onepage-pagination').show();
+                $('#arrow-pulser').show().animateCss("fadeInDown");
                 $('section.page1').show();
                 $('section.page2').show();
                 //Lancement de la one page scroll
@@ -43,6 +40,10 @@ Pace.on("hide", function () {
                     // the browser's width is less than 600, the fallback will kick in.
                     direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
                 });
+                $('.onepage-pagination').show().animateCss("fadeInRight");
+                setTimeout(function () {
+                    $('.ribbon-wrap').fadeIn("slow");
+                }, 500)
             }, 1500);
         }, 1000);
     }, 2500);
@@ -52,6 +53,12 @@ $(document).ready(function(){
 
     $('#arrow-pulser').on('click', function() {
         $(".main").moveDown();
+    });
+
+    $('.skill-bar').each(function() {
+        $(this).css({
+            width: $(this).html()
+        });
     });
 
     $(document).on("keydown", function (e) {

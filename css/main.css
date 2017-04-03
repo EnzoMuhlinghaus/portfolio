@@ -88,6 +88,10 @@ body.pace-running {
 
 .main {
   height: 100%; }
+  .main section h2 {
+    font-size: 3.75em;
+    margin: 55px auto;
+    text-align: center; }
   .main section.page0 {
     height: 100%; }
     .main section.page0 .intro {
@@ -96,19 +100,21 @@ body.pace-running {
       align-items: center;
       height: 100%;
       flex-direction: column; }
-      .main section.page0 .intro h1 {
-        color: #ffffff;
-        font-size: 3em; }
-      .main section.page0 .intro p {
+      .main section.page0 .intro h1#sign {
         display: none;
+        font-family: 'journalregular', cursive;
+        margin-left: 20%;
+        font-size: 3.5em;
+        font-weight: 500; }
+      .main section.page0 .intro p {
         color: #ffffff;
         font-size: 1.7em; }
+        .main section.page0 .intro p#hi {
+          font-size: 3em;
+          font-weight: 800; }
         .main section.page0 .intro p#welcome {
+          display: none;
           text-align: center; }
-        .main section.page0 .intro p#sign {
-          font-family: 'journalregular', cursive;
-          margin-left: 20%;
-          font-size: 3.5em; }
 
 .top-bar {
   position: fixed;
@@ -123,37 +129,65 @@ body.pace-running {
     .top-bar .logo h2 {
       font-size: 2em; }
 
-.main section.page1 {
-  background: rgba(0, 0, 0, 0.71); }
-  .main section.page1 .container {
-    font-size: 1.3em;
-    line-height: 190%;
-    width: 850px;
-    margin: 10px auto;
+.main section.page1 .container {
+  font-size: 1.3em;
+  line-height: 190%;
+  width: 850px;
+  margin: 10px auto;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center; }
+  .main section.page1 .container img {
+    margin: 50px auto;
+    border-radius: 50%;
+    border: black 5px solid; }
+  .main section.page1 .container .socials {
     display: flex;
-    flex-flow: column wrap;
-    align-items: center; }
-    .main section.page1 .container img {
-      margin: 50px auto;
-      border-radius: 50%;
-      border: black 5px solid; }
-    .main section.page1 .container .socials {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-around;
-      align-content: center;
-      width: 20%; }
-      .main section.page1 .container .socials .fa {
-        font-size: 40px; }
-        .main section.page1 .container .socials .fa:hover {
-          color: #7ac2ff;
-          cursor: pointer; }
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    width: 20%; }
+    .main section.page1 .container .socials .fa {
+      font-size: 40px; }
+      .main section.page1 .container .socials .fa:hover {
+        color: #7ac2ff;
+        cursor: pointer; }
 
-.main section.page2 h1 {
-  font-size: 3.75em;
-  margin: 55px auto;
-  text-align: center; }
+.main section.page2 .mySkills {
+  width: 850px;
+  margin: 10% auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between; }
+  .main section.page2 .mySkills .skills {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    margin: auto; }
+    .main section.page2 .mySkills .skills h3 {
+      margin: 15px 0; }
+    .main section.page2 .mySkills .skills div {
+      background-color: #ffffff;
+      padding: 15px;
+      margin-bottom: 15px;
+      position: relative; }
+      .main section.page2 .mySkills .skills div span {
+        background-color: #e97479;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        height: 100%;
+        overflow: hidden;
+        font-size: 1px;
+        text-indent: -9999px; }
+      .main section.page2 .mySkills .skills div u {
+        position: relative;
+        z-index: 2;
+        text-decoration: none;
+        color: #ffffff; }
 
 /*------------------------------------*  Arrow Scroller
 \*------------------------------------*/

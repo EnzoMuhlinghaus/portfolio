@@ -4,6 +4,7 @@
 
 $blanc : #ffffff;
 $bleu : #7ac2ff;
+$couleurSkills : #e97479;
 
 @font-face {
   font-family: 'journalregular';
@@ -112,6 +113,14 @@ body.pace-running{
 .main{
   height: 100%;
 
+  section{
+    h2{
+      font-size: 3.75em;
+      margin: 55px auto;
+      text-align: center;
+    }
+  }
+
   section.page0{
     height: 100%;
     .intro{
@@ -122,23 +131,27 @@ body.pace-running{
       flex-direction: column;
 
       h1{
-        color: $blanc;
-        font-size: 3em;
-      }
-
-      p{
-        display: none;
-        color: $blanc;
-        font-size: 1.7em;
-
-        &#welcome{
-          text-align: center;
-        }
-
         &#sign{
+          display: none;
           font-family: 'journalregular', cursive;
           margin-left: 20%;
           font-size: 3.5em;
+          font-weight: 500;
+        }
+      }
+
+      p{
+        color: $blanc;
+        font-size: 1.7em;
+
+        &#hi{
+          font-size: 3em;
+          font-weight: 800;
+        }
+
+        &#welcome{
+          display: none;
+          text-align: center;
         }
       }
     }
@@ -166,7 +179,6 @@ body.pace-running{
 }
 
 .main section.page1{
-  background: rgba(0, 0, 0, 0.71);
   .container{
     font-size: 1.3em;
     line-height: 190%;
@@ -204,11 +216,55 @@ body.pace-running{
 }
 
 .main section.page2 {
-  h1{
-    font-size: 3.75em;
-    margin: 55px auto;
-    text-align: center;
+  .mySkills{
+    width: 850px;
+    margin: 10% auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    .skills {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      width: 240px;
+      margin: auto;
+
+      h3{
+        margin: 15px 0;
+      }
+
+      div{
+        background-color: $blanc;
+        padding: 15px;
+        margin-bottom: 15px;
+        position: relative;
+
+        span {
+          background-color: $couleurSkills;
+          position: absolute;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          height: 100%;
+          overflow: hidden;
+          font-size: 1px;
+          text-indent: -9999px;
+        }
+
+        u {
+          position: relative;
+          z-index: 2;
+          text-decoration: none;
+          color: $blanc;
+        }
+      }
+    }
   }
+}
+
+.main section.page2 {
+
 }
 
 /*------------------------------------*\
