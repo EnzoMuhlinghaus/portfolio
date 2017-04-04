@@ -6,6 +6,21 @@ $blanc : #ffffff;
 $bleu : #7ac2ff;
 $couleurSkills : #e97479;
 
+$breakpoints: (
+  xs: 32rem,
+  sm: 48rem,
+  md: 72rem,
+  lg: 96rem,
+  xl: 102rem,
+  xx: 120rem
+);
+
+@mixin break($size) {
+  @media (max-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
 @font-face {
   font-family: 'journalregular';
   src: url('../fonts/fonts/journal/journal-webfont.eot');
@@ -92,6 +107,12 @@ body.pace-running{
           margin-left: 20%;
           font-size: 3.5em;
           font-weight: 500;
+
+          @include break(xs) {
+            margin-left: 15%;
+            margin-top: 5px;
+            font-size: 3em;
+          }
         }
       }
 
@@ -107,6 +128,12 @@ body.pace-running{
         &#welcome{
           display: none;
           text-align: center;
+          padding: 0 20px;
+
+          @include break(xs) {
+            font-size: 1.4em;
+          }
+
         }
       }
     }
@@ -124,7 +151,7 @@ body.pace-running{
   .logo{
     float: right;
     margin-top: -6px;
-    right: 60px;
+    right: 25px;
     position: relative;
 
     h2{
@@ -142,11 +169,36 @@ body.pace-running{
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+    text-align: justify;
+
+    @include break(lg) {
+      font-size: 1em;
+    }
+
+    @include break(md) {
+      width: 90%;
+      font-size: 1em;
+    }
+
+    @include break(xs) {
+      font-size: 0.9em;
+      width: 75%;
+    }
 
     img{
       margin: 50px auto;
       border-radius: 50%;
-      border: black 5px solid;
+      width: 30%;
+      border: black 2px solid;
+
+      @include break(lg) {
+        width: 24%;
+      }
+
+      @include break(xs) {
+        width: 50%;
+        margin: 35px auto
+      }
     }
 
     .socials{
@@ -156,6 +208,10 @@ body.pace-running{
       justify-content: space-around;
       align-content: center;
       width: 20%;
+
+      @include break(xs) {
+        width: 65%;
+      }
 
       .fa{
         font-size: 40px;
@@ -177,6 +233,21 @@ body.pace-running{
     display: flex;
     flex-flow: column wrap;
     height: 80%;
+    align-items: center;
+
+    @include break(md) {
+      width: 90%;
+    }
+
+    .please{
+      font-size: 1.7em;
+      color: $blanc;
+      display: none;
+
+      @include break(sm){
+        display: block;
+      }
+    }
 
     .skills {
       text-align: center;
@@ -185,13 +256,26 @@ body.pace-running{
       width: 240px;
       margin-bottom: 12px;
 
+      @include break(md){
+        width: 180px;
+      }
+
+      @include break(sm){
+        display: none;
+
+        &:nth-child(4){
+          display: block;
+        }
+      }
+
       h3{
         margin: 15px 0;
+        font-weight: 500;
       }
 
       div{
         background-color: #373c6f;
-        padding: 15px;
+        padding: 12px;
         margin-bottom: 15px;
         position: relative;
 
@@ -219,7 +303,20 @@ body.pace-running{
 }
 
 .main section.page2 {
+  .myProjects{
+    width: 850px;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-around;
 
+    @include break(md) {
+      width: 90%;
+    }
+
+    .project{
+      margin: 15px;
+    }
+  }
 }
 
 /*------------------------------------*\
@@ -254,20 +351,36 @@ body.pace-running{
 }
 
 .scroll-text {
-  font-size: 50px;
-  font-family: 'journalregular', cursive;
-  color: #EFF8FC;
   position: absolute;
   width: 100%;
   top: -30px;
-  left: 0;
-  text-align: center;
+  left: -35px;
   -webkit-transition:.25s ease-in-out;
   -moz-transition:.25s ease-in-out;
   -ms-transition:.25s ease-in-out;
   -o-transition:.25s ease-in-out;
   transition:.25s ease-in-out;
   opacity:0;
+
+  img{
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+
+    animation: blink 2s infinite;
+    -moz-animation: blink 2s infinite;
+    -webkit-animation: blink 2s infinite;
+
+    &.up{
+      -webkit-animation-delay: 1s;
+      -moz-animation-delay: 1s;
+      animation-delay: 1s;
+    }
+
+    &.down{
+      opacity: 1;
+    }
+  }
 }
 
 .scroller-arrow {
@@ -346,5 +459,32 @@ body.pace-running{
   to {
     transform:translate3d(0,30px,0);
     opacity:0;
+  }
+}
+
+@-webkit-keyframes blink {
+    0%,50%{
+      opacity:0;
+    }
+    51%,100%{
+      opacity:1;
+    }
+}
+
+@-moz-keyframes blink {
+  0%,50%{
+    opacity:0;
+  }
+  51%,100%{
+    opacity:1;
+  }
+}
+
+@keyframes blink {
+  0%,50%{
+    opacity:0;
+  }
+  51%,100%{
+    opacity:1;
   }
 }

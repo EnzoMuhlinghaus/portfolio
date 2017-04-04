@@ -69,4 +69,27 @@ $(document).ready(function(){
         }
     });
 
+    // $('.scroll-text').delay(100),
+    //     function(){
+    //         $('.scroll-text .up').css('display','block');
+    //         }, 1000, function() {
+    //             $('.scroll-text .up').animate({
+    //                 'opacity': '1'
+    //             }, 1000, function() {
+    //                 $('.scroll-text .down').css('display','block');
+    //             });
+    //             $('#affiches .cont').delay(1100).animate({
+    //                 'left': '0px'
+    //             }, 1000, function() {
+    //                 $('.scroll-text .down').css('display','none');
+    //                 $('.scroll-text').animate({
+    //                     'opacity': '0'
+    //                 }, 1000, function() {
+    //                     $('.scroll-text').css('display','none');
+    //                 });
+    //             });
+    //         });
+    //     }
+    // );
+
 });
