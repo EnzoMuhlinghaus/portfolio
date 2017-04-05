@@ -186,7 +186,8 @@ body.pace-running {
       background-color: #373c6f;
       padding: 12px;
       margin-bottom: 15px;
-      position: relative; }
+      position: relative;
+      border-radius: 5px; }
       .main section.page2 .mySkills .skills div span {
         background-color: #e97479;
         position: absolute;
@@ -196,7 +197,8 @@ body.pace-running {
         height: 100%;
         overflow: hidden;
         font-size: 1px;
-        text-indent: -9999px; }
+        text-indent: -9999px;
+        border-radius: 5px; }
       .main section.page2 .mySkills .skills div u {
         position: relative;
         z-index: 2;

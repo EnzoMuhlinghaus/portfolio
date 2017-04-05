@@ -278,6 +278,7 @@ body.pace-running{
         padding: 12px;
         margin-bottom: 15px;
         position: relative;
+        border-radius: 5px;
 
         span {
           background-color: $couleurSkills;
@@ -289,6 +290,7 @@ body.pace-running{
           overflow: hidden;
           font-size: 1px;
           text-indent: -9999px;
+          border-radius: 5px;
         }
 
         u {

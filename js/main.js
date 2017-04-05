@@ -15,7 +15,8 @@ Pace.on("hide", function () {
     setTimeout(function(){
         $("#hi").removeClass("fadeInDown").addClass("animated fadeOutUp").fadeOut(500);
         setTimeout(function(){
-            $("#welcome, #sign").fadeIn();
+            $("#welcome").fadeIn().animateCss("fadeInDown");
+            $("#sign").fadeIn().animateCss("fadeInUp");
             setTimeout(function(){
                 $('.top-bar').show().animateCss("fadeInRight");
                 $('#arrow-pulser').show().animateCss("fadeInDown");
@@ -46,7 +47,7 @@ Pace.on("hide", function () {
                 }, 500)
             }, 1500);
         }, 1000);
-    }, 2500);
+    }, 2000);
 });
 
 $(document).ready(function(){
@@ -68,28 +69,5 @@ $(document).ready(function(){
             ribbon.fadeOut();
         }
     });
-
-    // $('.scroll-text').delay(100),
-    //     function(){
-    //         $('.scroll-text .up').css('display','block');
-    //         }, 1000, function() {
-    //             $('.scroll-text .up').animate({
-    //                 'opacity': '1'
-    //             }, 1000, function() {
-    //                 $('.scroll-text .down').css('display','block');
-    //             });
-    //             $('#affiches .cont').delay(1100).animate({
-    //                 'left': '0px'
-    //             }, 1000, function() {
-    //                 $('.scroll-text .down').css('display','none');
-    //                 $('.scroll-text').animate({
-    //                     'opacity': '0'
-    //                 }, 1000, function() {
-    //                     $('.scroll-text').css('display','none');
-    //                 });
-    //             });
-    //         });
-    //     }
-    // );
 
 });
