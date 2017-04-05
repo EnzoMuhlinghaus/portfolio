@@ -76,6 +76,12 @@ body.pace-running{
   margin-left: 50px;
 }
 
+.onepage-pagination{
+  @include break(sm) {
+    display: none !important;
+  }
+}
+
 #hi, .top-bar, section.page1, section.page2{
   display: none;
 }
@@ -88,6 +94,10 @@ body.pace-running{
       font-size: 3.75em;
       margin: 55px auto;
       text-align: center;
+
+      @include break(sm) {
+        display: none;
+      }
     }
   }
 
@@ -181,7 +191,7 @@ body.pace-running{
     }
 
     @include break(xs) {
-      font-size: 0.9em;
+      font-size: 0.8em;
       width: 75%;
     }
 
@@ -235,6 +245,10 @@ body.pace-running{
     height: 80%;
     align-items: center;
 
+    @include break(lg) {
+      width: 1020px;
+    }
+
     @include break(md) {
       width: 90%;
     }
@@ -243,6 +257,7 @@ body.pace-running{
       font-size: 1.7em;
       color: $blanc;
       display: none;
+      text-align: center;
 
       @include break(sm){
         display: block;
@@ -256,16 +271,12 @@ body.pace-running{
       width: 240px;
       margin-bottom: 12px;
 
-      @include break(md){
-        width: 180px;
-      }
-
       @include break(sm){
         display: none;
 
-        &:nth-child(4){
-          display: block;
-        }
+        //&:nth-child(4){
+        //  display: block;
+        //}
       }
 
       h3{
@@ -304,19 +315,20 @@ body.pace-running{
   }
 }
 
-.main section.page2 {
+.main section.page3 {
   .myProjects{
-    width: 850px;
+    width: 1000px;
     display: flex;
     flex-flow: wrap row;
-    justify-content: space-around;
+    margin: auto;
+    justify-content: center;
 
     @include break(md) {
       width: 90%;
     }
 
     .project{
-      margin: 15px;
+      margin: 2%;
     }
   }
 }

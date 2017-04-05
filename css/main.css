@@ -45,6 +45,10 @@ body.pace-running {
   bottom: 51%;
   margin-left: 50px; }
 
+@media (max-width: 48rem) {
+  .onepage-pagination {
+    display: none !important; } }
+
 #hi, .top-bar, section.page1, section.page2 {
   display: none; }
 
@@ -54,6 +58,9 @@ body.pace-running {
     font-size: 3.75em;
     margin: 55px auto;
     text-align: center; }
+    @media (max-width: 48rem) {
+      .main section h2 {
+        display: none; } }
   .main section.page0 {
     height: 100%; }
     .main section.page0 .intro {
@@ -118,7 +125,7 @@ body.pace-running {
       font-size: 1em; } }
   @media (max-width: 32rem) {
     .main section.page1 .container {
-      font-size: 0.9em;
+      font-size: 0.8em;
       width: 75%; } }
   .main section.page1 .container img {
     margin: 50px auto;
@@ -155,13 +162,17 @@ body.pace-running {
   flex-flow: column wrap;
   height: 80%;
   align-items: center; }
+  @media (max-width: 96rem) {
+    .main section.page2 .mySkills {
+      width: 1020px; } }
   @media (max-width: 72rem) {
     .main section.page2 .mySkills {
       width: 90%; } }
   .main section.page2 .mySkills .please {
     font-size: 1.7em;
     color: #ffffff;
-    display: none; }
+    display: none;
+    text-align: center; }
     @media (max-width: 48rem) {
       .main section.page2 .mySkills .please {
         display: block; } }
@@ -171,14 +182,9 @@ body.pace-running {
     flex-direction: column;
     width: 240px;
     margin-bottom: 12px; }
-    @media (max-width: 72rem) {
-      .main section.page2 .mySkills .skills {
-        width: 180px; } }
     @media (max-width: 48rem) {
       .main section.page2 .mySkills .skills {
-        display: none; }
-        .main section.page2 .mySkills .skills:nth-child(4) {
-          display: block; } }
+        display: none; } }
     .main section.page2 .mySkills .skills h3 {
       margin: 15px 0;
       font-weight: 500; }
@@ -205,16 +211,17 @@ body.pace-running {
         text-decoration: none;
         color: #ffffff; }
 
-.main section.page2 .myProjects {
-  width: 850px;
+.main section.page3 .myProjects {
+  width: 1000px;
   display: flex;
   flex-flow: wrap row;
-  justify-content: space-around; }
+  margin: auto;
+  justify-content: center; }
   @media (max-width: 72rem) {
-    .main section.page2 .myProjects {
+    .main section.page3 .myProjects {
       width: 90%; } }
-  .main section.page2 .myProjects .project {
-    margin: 15px; }
+  .main section.page3 .myProjects .project {
+    margin: 2%; }
 
 /*------------------------------------*  Arrow Scroller
 \*------------------------------------*/
