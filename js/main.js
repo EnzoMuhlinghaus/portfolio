@@ -18,7 +18,7 @@ Pace.on("hide", function () {
             $("#welcome").fadeIn().animateCss("fadeInDown");
             $("#sign").fadeIn().animateCss("fadeInUp");
             setTimeout(function(){
-                $('.top-bar').show().animateCss("fadeInRight");
+                $('.logo').show().animateCss("fadeInRight");
                 $('#arrow-pulser').show().animateCss("fadeInDown");
                 $('section.page1').show();
                 $('section.page2').show();
@@ -34,16 +34,21 @@ Pace.on("hide", function () {
                     },  // This option accepts a callback function. The function will be called before the page moves.
                     afterMove: function (index) {
                     },   // This option accepts a callback function. The function will be called after the page moves.
-                    loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+                    loop: true,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
                     keyboard: true,                  // You can activate the keyboard controls
-                    responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
+                    responsiveFallback: 1050,        // You can fallback to normal page scroll by defining the width of the browser in which
                     // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
                     // the browser's width is less than 600, the fallback will kick in.
                     direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
                 });
                 $('.onepage-pagination').show().animateCss("fadeInRight");
                 setTimeout(function () {
-                    $('.ribbon-wrap').fadeIn("slow");
+                    $('.social-icon').each(function (index) {
+                        var $this = $(this);
+                        setTimeout(function () {
+                            $this.css("opacity", 1).animateCss("flipInX");
+                        }, 300 * index);
+                    })
                 }, 500)
             }, 1500);
         }, 1000);
@@ -54,6 +59,14 @@ $(document).ready(function(){
 
     $('#arrow-pulser').on('click', function() {
         $(".main").moveDown();
+    });
+
+    $('.logo').on('click', function() {
+        $(".main").moveTo(1);
+    });
+
+    $(".social-icon").hover(function () {
+       $(this).animateCss("tada");
     });
 
     $('.skill-bar').each(function() {

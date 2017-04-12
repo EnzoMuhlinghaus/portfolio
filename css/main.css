@@ -1,12 +1,17 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 @import url(https://fonts.googleapis.com/css?family=Give+You+Glory);
 @import url(https://fonts.googleapis.com/css?family=Muli);
+/* Social Icon Mixin */
+/* Breakpoints Mixin */
 @font-face {
   font-family: 'journalregular';
   src: url("../fonts/fonts/journal/journal-webfont.eot");
   src: url("../fonts/fonts/journal/journal-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fonts/journal/journal-webfont.woff") format("woff"), url("../fonts/fonts/journal/journal-webfont.ttf") format("truetype"), url("../fonts/fonts/journal/journal-webfont.svg#journalregular") format("svg");
   font-weight: normal;
   font-style: normal; }
+
+#hi, section.page1, section.page2 {
+  display: none; }
 
 html {
   font-family: 'Muli', sans-serif;
@@ -45,12 +50,9 @@ body.pace-running {
   bottom: 51%;
   margin-left: 50px; }
 
-@media (max-width: 48rem) {
+@media (max-width: 72rem) {
   .onepage-pagination {
     display: none !important; } }
-
-#hi, .top-bar, section.page1, section.page2 {
-  display: none; }
 
 .main {
   height: 100%; }
@@ -99,13 +101,74 @@ body.pace-running {
   z-index: 10;
   width: 100%;
   height: 82px; }
-  .top-bar .logo {
-    float: right;
-    margin-top: -6px;
-    right: 25px;
-    position: relative; }
-    .top-bar .logo h2 {
-      font-size: 2em; }
+  .top-bar .icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%; }
+    .top-bar .icons .logo {
+      cursor: pointer;
+      margin: 0 2%;
+      display: none; }
+      .top-bar .icons .logo h2 {
+        font-size: 2em;
+        margin: 0; }
+    .top-bar .icons .social-icon {
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 50px;
+      height: 50px;
+      margin: 0 0.5rem;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.5rem;
+      text-decoration: none;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+      .top-bar .icons .social-icon--linkedin {
+        color: #ffffff;
+        background: #3f497a;
+        -webkit-transition: background 400ms;
+        transition: background 400ms; }
+        .top-bar .icons .social-icon--linkedin:hover {
+          background: #2d669d;
+          background: linear-gradient(tint(#2d669d, 5%), shade(#2d669d, 5%));
+          border-bottom: 1px solid shade(#2d669d, 20%);
+          text-shadow: 0px 1px 0px shade(#2d669d, 20%); }
+      .top-bar .icons .social-icon--twitter {
+        color: #ffffff;
+        background: #3f497a;
+        -webkit-transition: background 400ms;
+        transition: background 400ms; }
+        .top-bar .icons .social-icon--twitter:hover {
+          background: #2b97f1;
+          background: linear-gradient(tint(#2b97f1, 5%), shade(#2b97f1, 5%));
+          border-bottom: 1px solid shade(#2b97f1, 20%);
+          text-shadow: 0px 1px 0px shade(#2b97f1, 20%); }
+      .top-bar .icons .social-icon--github {
+        color: #ffffff;
+        background: #3f497a;
+        -webkit-transition: background 400ms;
+        transition: background 400ms; }
+        .top-bar .icons .social-icon--github:hover {
+          background: #4183c4;
+          background: linear-gradient(tint(#4183c4, 5%), shade(#4183c4, 5%));
+          border-bottom: 1px solid shade(#4183c4, 20%);
+          text-shadow: 0px 1px 0px shade(#4183c4, 20%); }
+      .top-bar .icons .social-icon--envelope {
+        color: #ffffff;
+        background: #3f497a;
+        -webkit-transition: background 400ms;
+        transition: background 400ms; }
+        .top-bar .icons .social-icon--envelope:hover {
+          background: #e96062;
+          background: linear-gradient(tint(#e96062, 5%), shade(#e96062, 5%));
+          border-bottom: 1px solid shade(#e96062, 20%);
+          text-shadow: 0px 1px 0px shade(#e96062, 20%); }
+      .top-bar .icons .social-icon:active {
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) inset; }
 
 .main section.page1 .container {
   font-size: 1.3em;
@@ -265,6 +328,9 @@ body.pace-running {
     animation: blink 2s infinite;
     -moz-animation: blink 2s infinite;
     -webkit-animation: blink 2s infinite; }
+    @media (max-width: 72rem) {
+      .scroll-text img {
+        display: none; } }
     .scroll-text img.up {
       -webkit-animation-delay: 1s;
       -moz-animation-delay: 1s;
@@ -365,16 +431,13 @@ body.pace-running {
 \*------------------------------------*/
 /* START TOOLTIP STYLES */
 [tooltip] {
-  position: relative;
-  /* opinion 1 */ }
+  position: relative; }
 
 /* Applies to all tooltips */
 [tooltip]::before,
 [tooltip]::after {
   text-transform: none;
-  /* opinion 2 */
   font-size: .9em;
-  /* opinion 3 */
   line-height: 1;
   user-select: none;
   pointer-events: none;
@@ -385,15 +448,10 @@ body.pace-running {
 [tooltip]::before {
   content: '';
   border: 5px solid transparent;
-  /* opinion 4 */
-  z-index: 1001;
-  /* absurdity 1 */ }
+  z-index: 1001; }
 
 [tooltip]::after {
   content: attr(tooltip);
-  /* magic! */
-  /* most of the rest of this is opinion */
-  font-family: Helvetica, sans-serif;
   text-align: center;
   /*
     Let the content set the size of the tooltips

@@ -5,6 +5,26 @@
 $blanc : #ffffff;
 $bleu : #7ac2ff;
 $couleurSkills : #e97479;
+$color-github: #4183c4;
+$color-twitter: #2b97f1;
+$color-linkedin: #2d669d;
+$color-envelope: #e96062;
+
+/* Social Icon Mixin */
+@mixin social-icon($color) {
+  color: $blanc;
+  background: #3f497a;
+  -webkit-transition: background 400ms;
+  transition: background 400ms;
+
+  &:hover {
+    background: $color;
+    background: linear-gradient(tint($color, 5%), shade($color, 5%));
+    border-bottom: 1px solid shade($color, 20%);
+    text-shadow: 0px 1px 0px shade($color, 20%);
+  }
+}
+
 
 $breakpoints: (
   xs: 32rem,
@@ -15,6 +35,7 @@ $breakpoints: (
   xx: 120rem
 );
 
+/* Breakpoints Mixin */
 @mixin break($size) {
   @media (max-width: map-get($breakpoints, $size)) {
     @content;
@@ -30,6 +51,10 @@ $breakpoints: (
   url('../fonts/fonts/journal/journal-webfont.svg#journalregular') format('svg');
   font-weight: normal;
   font-style: normal;
+}
+
+#hi, section.page1, section.page2{
+  display: none;
 }
 
 html{
@@ -77,13 +102,9 @@ body.pace-running{
 }
 
 .onepage-pagination{
-  @include break(sm) {
+  @include break(md) {
     display: none !important;
   }
-}
-
-#hi, .top-bar, section.page1, section.page2{
-  display: none;
 }
 
 .main{
@@ -158,14 +179,46 @@ body.pace-running{
   width: 100%;
   height: 82px;
 
-  .logo{
-    float: right;
-    margin-top: -6px;
-    right: 25px;
-    position: relative;
+  .icons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
 
-    h2{
-      font-size: 2em;
+    .logo{
+      cursor: pointer;
+      margin: 0 2%;
+      display: none;
+
+      h2{
+        font-size: 2em;
+        margin: 0;
+      }
+    }
+
+    .social-icon {
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 50px;
+      height: 50px;
+      margin: 0 0.5rem;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.5rem;
+      text-decoration: none;
+      text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+
+      &--linkedin { @include social-icon($color-linkedin); }
+      &--twitter { @include social-icon($color-twitter); }
+      &--github { @include social-icon($color-github); }
+      &--envelope { @include social-icon($color-envelope); }
+
+      &:active {
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) inset;
+      }
     }
   }
 }
@@ -381,6 +434,10 @@ body.pace-running{
     opacity: 0;
     position: absolute;
 
+    @include break(md) {
+      display: none;
+    }
+
     animation: blink 2s infinite;
     -moz-animation: blink 2s infinite;
     -webkit-animation: blink 2s infinite;
@@ -508,14 +565,14 @@ body.pace-running{
 \*------------------------------------*/
 /* START TOOLTIP STYLES */
 [tooltip] {
-  position: relative; /* opinion 1 */
+  position: relative;
 }
 
 /* Applies to all tooltips */
 [tooltip]::before,
 [tooltip]::after {
-  text-transform: none; /* opinion 2 */
-  font-size: .9em; /* opinion 3 */
+  text-transform: none;
+  font-size: .9em;
   line-height: 1;
   user-select: none;
   pointer-events: none;
@@ -525,14 +582,12 @@ body.pace-running{
 }
 [tooltip]::before {
   content: '';
-  border: 5px solid transparent; /* opinion 4 */
-  z-index: 1001; /* absurdity 1 */
+  border: 5px solid transparent;
+  z-index: 1001;
 }
 [tooltip]::after {
-  content: attr(tooltip); /* magic! */
+  content: attr(tooltip);
 
-  /* most of the rest of this is opinion */
-  font-family: Helvetica, sans-serif;
   text-align: center;
 
   /*
