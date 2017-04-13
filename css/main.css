@@ -284,7 +284,7 @@ body.pace-running {
     .main section.page3 .myProjects {
       width: 90%; } }
   .main section.page3 .myProjects .project {
-    margin: 2%; }
+    margin: 10px 2%; }
 
 /*------------------------------------*  Arrow Scroller
 \*------------------------------------*/
