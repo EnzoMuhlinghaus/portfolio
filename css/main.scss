@@ -112,8 +112,8 @@ body.pace-running{
 
   section{
     h2{
-      font-size: 3.75em;
-      margin: 55px auto;
+      font-size: 3em;
+      margin: 25px auto;
       text-align: center;
 
       @include break(sm) {
@@ -370,11 +370,15 @@ body.pace-running{
 
 .main section.page3 {
   .myProjects{
-    width: 1000px;
+    width: 1300px;
     display: flex;
     flex-flow: wrap row;
     margin: auto;
     justify-content: center;
+
+    img{
+      width: 500px;
+    }
 
     @include break(md) {
       width: 90%;
@@ -382,6 +386,48 @@ body.pace-running{
 
     .project{
       margin: 2%;
+      box-shadow: 0 0 1px rgba(255, 255, 255, 0.5), 0 0 10px 5px rgba(0, 0, 0, 0.1);
+
+      &:after {
+        content: url(../img/hover-me-left.png);
+        position: absolute;
+        bottom: 10px;
+        right: -110px;
+      }
+
+      img{
+        width: 500px;
+      }
+
+      figcaption{
+        background-color: #373c6f;
+        padding: 5%;
+
+        h3{
+          font-size: 1.75em;
+        }
+
+        ul{
+
+          li{
+
+            strong{
+              color: $bleu;
+            }
+
+            .off{
+              color: #dd1919;
+              font-weight: bold;
+            }
+
+            .on{
+              color: #20dd19;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
     }
   }
 }

@@ -57,8 +57,8 @@ body.pace-running {
 .main {
   height: 100%; }
   .main section h2 {
-    font-size: 3.75em;
-    margin: 55px auto;
+    font-size: 3em;
+    margin: 25px auto;
     text-align: center; }
     @media (max-width: 48rem) {
       .main section h2 {
@@ -275,16 +275,39 @@ body.pace-running {
         color: #ffffff; }
 
 .main section.page3 .myProjects {
-  width: 1000px;
+  width: 1300px;
   display: flex;
   flex-flow: wrap row;
   margin: auto;
   justify-content: center; }
+  .main section.page3 .myProjects img {
+    width: 500px; }
   @media (max-width: 72rem) {
     .main section.page3 .myProjects {
       width: 90%; } }
   .main section.page3 .myProjects .project {
-    margin: 2%; }
+    margin: 2%;
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.5), 0 0 10px 5px rgba(0, 0, 0, 0.1); }
+    .main section.page3 .myProjects .project:after {
+      content: url(../img/hover-me-left.png);
+      position: absolute;
+      bottom: 10px;
+      right: -110px; }
+    .main section.page3 .myProjects .project img {
+      width: 500px; }
+    .main section.page3 .myProjects .project figcaption {
+      background-color: #373c6f;
+      padding: 5%; }
+      .main section.page3 .myProjects .project figcaption h3 {
+        font-size: 1.75em; }
+      .main section.page3 .myProjects .project figcaption ul li strong {
+        color: #7ac2ff; }
+      .main section.page3 .myProjects .project figcaption ul li .off {
+        color: #dd1919;
+        font-weight: bold; }
+      .main section.page3 .myProjects .project figcaption ul li .on {
+        color: #20dd19;
+        font-weight: bold; }
 
 /*------------------------------------*  Arrow Scroller
 \*------------------------------------*/
