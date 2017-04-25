@@ -32,8 +32,10 @@ gulp.task('default', ['sass', 'clean'], function () {
     gulp.src('img/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('dist/img'));
-    gulp.src('fonts/*')
+    gulp.src('fonts/**/*')
         .pipe(gulp.dest('dist/fonts'));
+    gulp.src('*.pdf')
+        .pipe(gulp.dest('dist/'));
     return gulp.src('*.html')
         .pipe(useref())
         // Minify Js
