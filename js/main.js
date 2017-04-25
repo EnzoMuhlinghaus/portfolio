@@ -22,6 +22,12 @@ Pace.on("hide", function () {
                 $('#arrow-pulser').show().animateCss("fadeInDown");
                 $('section.page1').show();
                 $('section.page2').show();
+                if($(window).width() > 760){
+                    $('section.page3').show();
+                }
+                else{
+                    $('section.page3').remove();
+                }
                 //Lancement de la one page scroll
                 $(".main").onepage_scroll({
                     sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
@@ -36,12 +42,17 @@ Pace.on("hide", function () {
                     },   // This option accepts a callback function. The function will be called after the page moves.
                     loop: true,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
                     keyboard: true,                  // You can activate the keyboard controls
-                    responsiveFallback: 1050,        // You can fallback to normal page scroll by defining the width of the browser in which
+                    // responsiveFallback: 1050,        // You can fallback to normal page scroll by defining the width of the browser in which
                     // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
                     // the browser's width is less than 600, the fallback will kick in.
                     direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
                 });
                 $('.onepage-pagination').show().animateCss("fadeInRight");
+                //Display navigation titles
+                $(".onepage-pagination > li:nth-child(1)").children().append('<span>Home</span>');
+                $(".onepage-pagination > li:nth-child(2)").children().append('<span>About me</span>');
+                $(".onepage-pagination > li:nth-child(3)").children().append('<span>Skills</span>');
+                $(".onepage-pagination > li:nth-child(4)").children().append('<span>Projects</span>');
                 setTimeout(function () {
                     $('.social-icon').each(function (index) {
                         var $this = $(this);
@@ -57,30 +68,25 @@ Pace.on("hide", function () {
 
 $(document).ready(function(){
 
+    //arrow navigation
     $('#arrow-pulser').on('click', function() {
         $(".main").moveDown();
     });
 
+    //come back home
     $('.logo').on('click', function() {
         $(".main").moveTo(1);
     });
 
+    //social icon tada!
     $(".social-icon").hover(function () {
        $(this).animateCss("tada");
     });
 
+    //display skills
     $('.skill-bar').each(function() {
         $(this).css({
             width: $(this).html()
         });
     });
-
-    $(document).on("keydown", function (e) {
-        if(e.key == "ArrowDown" || e.key == "ArrowUp"){
-            var ribbon = $('.ribbon-wrap');
-            ribbon.animateCss("rollOut");
-            ribbon.fadeOut();
-        }
-    });
-
 });

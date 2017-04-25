@@ -1,8 +1,27 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-@import url(https://fonts.googleapis.com/css?family=Give+You+Glory);
-@import url(https://fonts.googleapis.com/css?family=Muli);
-/* Social Icon Mixin */
-/* Breakpoints Mixin */
+/* vietnamese */
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Muli Regular"), local("Muli-Regular"), url(https://fonts.gstatic.com/s/muli/v10/Ul00HI23GehQ9qPsH_7ocQ.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB; }
+
+/* latin-ext */
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Muli Regular"), local("Muli-Regular"), url(https://fonts.gstatic.com/s/muli/v10/jbCPU7JDvi-y7oVFF-ztAg.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+
+/* latin */
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Muli Regular"), local("Muli-Regular"), url(https://fonts.gstatic.com/s/muli/v10/z6c3Zzm51I2zB_Gi7146Bg.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+
 @font-face {
   font-family: 'journalregular';
   src: url("../fonts/fonts/journal/journal-webfont.eot");
@@ -10,7 +29,9 @@
   font-weight: normal;
   font-style: normal; }
 
-#hi, section.page1, section.page2 {
+/* Social Icon Mixin */
+/* Breakpoints Mixin */
+#hi, section.page1, section.page2, section.page3 {
   display: none; }
 
 html {
@@ -53,6 +74,25 @@ body.pace-running {
 @media (max-width: 72rem) {
   .onepage-pagination {
     display: none !important; } }
+
+.onepage-pagination li a {
+  height: 2px; }
+  .onepage-pagination li a:hover {
+    text-decoration: none; }
+  .onepage-pagination li a.active span {
+    opacity: 1; }
+  .onepage-pagination li a span {
+    position: relative;
+    right: 120px;
+    font-size: 16px;
+    white-space: nowrap;
+    bottom: 5px;
+    text-align: right;
+    width: 105px;
+    color: #ffffff;
+    display: block;
+    opacity: 0;
+    transition: opacity .1s ease; }
 
 .main {
   height: 100%; }
@@ -106,10 +146,17 @@ body.pace-running {
     justify-content: flex-end;
     align-items: center;
     height: 100%; }
+    @media (max-width: 48rem) {
+      .top-bar .icons {
+        justify-content: center; } }
     .top-bar .icons .logo {
       cursor: pointer;
       margin: 0 2%;
       display: none; }
+      @media (max-width: 48rem) {
+        .top-bar .icons .logo {
+          margin-right: 0;
+          margin-left: 10px; } }
       .top-bar .icons .logo h2 {
         font-size: 2em;
         margin: 0; }
@@ -185,16 +232,18 @@ body.pace-running {
   @media (max-width: 72rem) {
     .main section.page1 .container {
       width: 90%;
-      font-size: 1em; } }
+      font-size: 1em;
+      margin: 50px auto; } }
   @media (max-width: 32rem) {
     .main section.page1 .container {
       font-size: 0.8em;
-      width: 75%; } }
+      width: 75%;
+      margin: 50px auto; } }
   .main section.page1 .container img {
     margin: 50px auto;
     border-radius: 50%;
     width: 30%;
-    border: black 2px solid; }
+    box-shadow: 0 0 1px white, 0 0 10px 5px rgba(0, 0, 0, 0.52); }
     @media (max-width: 96rem) {
       .main section.page1 .container img {
         width: 24%; } }
@@ -230,7 +279,8 @@ body.pace-running {
       width: 1020px; } }
   @media (max-width: 72rem) {
     .main section.page2 .mySkills {
-      width: 90%; } }
+      width: 90%;
+      justify-content: center; } }
   .main section.page2 .mySkills .please {
     font-size: 1.7em;
     color: #ffffff;
@@ -244,7 +294,13 @@ body.pace-running {
     display: flex;
     flex-direction: column;
     width: 240px;
-    margin-bottom: 12px; }
+    margin-bottom: 12px;
+    position: relative; }
+    .main section.page2 .mySkills .skills#hover-me:after {
+      content: url(../img/hover-me-left.png);
+      position: absolute;
+      bottom: 10px;
+      right: -120px; }
     @media (max-width: 48rem) {
       .main section.page2 .mySkills .skills {
         display: none; } }
@@ -279,35 +335,50 @@ body.pace-running {
   display: flex;
   flex-flow: wrap row;
   margin: auto;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center;
+  height: 55%; }
   .main section.page3 .myProjects img {
     width: 500px; }
   @media (max-width: 72rem) {
     .main section.page3 .myProjects {
       width: 90%; } }
   .main section.page3 .myProjects .project {
-    margin: 2%;
-    box-shadow: 0 0 1px rgba(255, 255, 255, 0.5), 0 0 10px 5px rgba(0, 0, 0, 0.1); }
-    .main section.page3 .myProjects .project:after {
+    margin: 10px 2%;
+    position: relative; }
+    .main section.page3 .myProjects .project#hover-me:after {
       content: url(../img/hover-me-left.png);
       position: absolute;
       bottom: 10px;
-      right: -110px; }
-    .main section.page3 .myProjects .project img {
-      width: 500px; }
-    .main section.page3 .myProjects .project figcaption {
-      background-color: #373c6f;
-      padding: 5%; }
-      .main section.page3 .myProjects .project figcaption h3 {
-        font-size: 1.75em; }
-      .main section.page3 .myProjects .project figcaption ul li strong {
-        color: #7ac2ff; }
-      .main section.page3 .myProjects .project figcaption ul li .off {
-        color: #dd1919;
-        font-weight: bold; }
-      .main section.page3 .myProjects .project figcaption ul li .on {
-        color: #20dd19;
-        font-weight: bold; }
+      right: -120px; }
+    .main section.page3 .myProjects .project [class^=imghvr-] {
+      box-shadow: 0 0 1px white, 0 0 10px 5px rgba(0, 0, 0, 0.38); }
+      .main section.page3 .myProjects .project [class^=imghvr-] img {
+        width: 500px; }
+      .main section.page3 .myProjects .project [class^=imghvr-] figcaption {
+        background-color: #373c6f;
+        padding: 5%; }
+        .main section.page3 .myProjects .project [class^=imghvr-] figcaption .title_project {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-start;
+          align-items: center; }
+          .main section.page3 .myProjects .project [class^=imghvr-] figcaption .title_project h3 {
+            font-size: 1.75em; }
+          .main section.page3 .myProjects .project [class^=imghvr-] figcaption .title_project i {
+            margin: 0 15px; }
+        .main section.page3 .myProjects .project [class^=imghvr-] figcaption ul {
+          list-style: none;
+          padding: 0;
+          margin-top: 0; }
+          .main section.page3 .myProjects .project [class^=imghvr-] figcaption ul li strong {
+            color: #7ac2ff; }
+          .main section.page3 .myProjects .project [class^=imghvr-] figcaption ul li .off {
+            color: #dd1919;
+            font-weight: bold; }
+          .main section.page3 .myProjects .project [class^=imghvr-] figcaption ul li .on {
+            color: #20dd19;
+            font-weight: bold; }
 
 /*------------------------------------*  Arrow Scroller
 \*------------------------------------*/

@@ -8,6 +8,10 @@
 
     <meta name="description" content="Hey ! I’m a 20 year old student web developer based in Valence - France.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property=og:url content=http://enzomuhlinghaus.com/ >
+    <meta property=og:type content=website>
+    <meta property=og:title content="Enzo Muhlinghaus | Web Developer">
+    <meta property=og:description content="Hey ! I’m a 20 year old student web developer based in Valence - France.">
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
@@ -19,15 +23,15 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/pace.css">
     <link rel="stylesheet" href="css/onepage-scroll.css">
-    <link rel="stylesheet" href="fonts/font-awesome-4.6.3/css/font-awesome.min.css">
     <!-- endbuild -->
+    <link rel="stylesheet" href="fonts/font-awesome-4.6.3/css/font-awesome.min.css">
 
     </head>
 
 <body>
         <nav class="top-bar">
             <div class="icons">
-                <a class="social-icon social-icon--envelope" href="mailto:contact@enzomuhlinghaus.fr">
+                <a class="social-icon social-icon--envelope" href="mailto:contact@enzomuhlinghaus.com">
                     <i class="fa fa-envelope"></i>
                 </a>
                 <a class="social-icon social-icon--github" href="https://github.com/EnzoMuhlinghaus" target="_blank">
@@ -133,7 +137,7 @@
                             <span class="skill-bar">70%</span><u>Foundation</u>
                         </div>
                     </div>
-                    <div class="skills">
+                    <div class="skills" id="hover-me">
                         <h3>Javascript Tools</h3>
                         <div tooltip="85% - Using it often">
                             <span class="skill-bar">85%</span><u>jQuery</u>
@@ -161,52 +165,64 @@
                         </div>
                     </div>
                     <div class="please">
-                        <p>Please, check my resume or visit my portfolio with a larger screen to see all my skills and projects.</p>
+                        <p>Please, visit my portfolio with a larger screen to see all my skills and projects.</p>
                     </div>
                 </div>
             </section>
             <section class="page3">
                 <h2>My Projects</h2>
                 <div class="myProjects">
-                    <div class="project imghvr-push-up">
-                        <img src="img/projects/thepadlocks.png" alt="thepadlocks">
-                        <figcaption>
-                            <h3>Baticopro</h3>
-                            <ul>
-                                <li>
-                                    <strong>Type</strong> : Apprentice Project
-                                </li>
-                                <li>
-                                    <strong>Role</strong> : Lead Developer / Full-Stack developer
-                                </li>
-                                <li>
-                                    <strong>Statut</strong> : <span class="on">ONLINE</span>
-                                </li>
-                                <li>
-                                    <strong>Stack</strong> : Magento / Zend / Solr / JQuery
-                                </li>
-                            </ul>
-                        </figcaption>
+                    <div class="project">
+                        <div class="imghvr-push-up">
+                            <img src="img/projects/baticopro.png" alt="baticopro">
+                            <figcaption>
+                                <div class="title_project">
+                                    <h3>Baticopro</h3>
+                                    <i class="fa fa-external-link-square"></i>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <strong>Type</strong> : Apprentice Project
+                                    </li>
+                                    <li>
+                                        <strong>Role</strong> : Lead Developer / Full-Stack developer
+                                    </li>
+                                    <li>
+                                        <strong>Statut</strong> : <span class="on">ONLINE</span>
+                                    </li>
+                                    <li>
+                                        <strong>Stack</strong> : Magento / Zend / Solr / JQuery / Foundation
+                                    </li>
+                                </ul>
+                                <a href="http://www.baticopro.com/" target="_blank"></a>
+                            </figcaption>
+                        </div>
                     </div>
-                    <div class="project imghvr-push-up" id="hover-me">
-                        <img src="img/projects/thepadlocks.png" alt="thepadlocks">
-                        <figcaption>
-                            <h3>The Padlocks</h3>
-                            <ul>
-                                <li>
-                                    <strong>Type</strong> : Freelance Project
-                                </li>
-                                <li>
-                                    <strong>Role</strong> : Project manager / UI-UX designer / Developer
-                                </li>
-                                <li>
-                                    <strong>Statut</strong> : <span class="off">OFFLINE</span>
-                                </li>
-                                <li>
-                                    <strong>Stack</strong> : Wordpress / Bootstrap / JQuery
-                                </li>
-                            </ul>
-                        </figcaption>
+                    <div id="hover-me" class="project">
+                        <div class="imghvr-push-up">
+                            <img src="img/projects/thepadlocks.png" alt="thepadlocks">
+                            <figcaption>
+                                <div class="title_project">
+                                    <h3>The Padlocks</h3>
+                                    <i class="fa fa-external-link-square"></i>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <strong>Type</strong> : Freelance Project
+                                    </li>
+                                    <li>
+                                        <strong>Role</strong> : Project manager / UI-UX designer / Developer
+                                    </li>
+                                    <li>
+                                        <strong>Statut</strong> : <span class="off">OFFLINE</span>
+                                    </li>
+                                    <li>
+                                        <strong>Stack</strong> : Wordpress / Bootstrap / JQuery
+                                    </li>
+                                </ul>
+                                <!--<a href="#" target="_blank"></a>-->
+                            </figcaption>
+                        </div>
                     </div>
                 </div>
             </section>
