@@ -274,12 +274,9 @@ body.pace-running {
   flex-flow: column wrap;
   height: 80%;
   align-items: center; }
-  @media (max-width: 96rem) {
-    .main section.page2 .mySkills {
-      width: 1020px; } }
   @media (max-width: 72rem) {
     .main section.page2 .mySkills {
-      width: 90%;
+      width: 75%;
       justify-content: center; } }
   .main section.page2 .mySkills .please {
     font-size: 1.7em;
@@ -296,6 +293,9 @@ body.pace-running {
     width: 240px;
     margin-bottom: 12px;
     position: relative; }
+    @media (max-width: 72rem) {
+      .main section.page2 .mySkills .skills {
+        width: 190px; } }
     .main section.page2 .mySkills .skills#hover-me:after {
       content: url(../img/hover-me-left.png);
       position: absolute;

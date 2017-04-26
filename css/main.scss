@@ -365,12 +365,8 @@ body.pace-running{
     height: 80%;
     align-items: center;
 
-    @include break(lg) {
-      width: 1020px;
-    }
-
     @include break(md) {
-      width: 90%;
+      width: 75%;
       justify-content: center;
     }
 
@@ -392,6 +388,10 @@ body.pace-running{
       width: 240px;
       margin-bottom: 12px;
       position: relative;
+
+      @include break(md) {
+        width: 190px;
+      }
 
       &#hover-me:after {
         content: url(../img/hover-me-left.png);
