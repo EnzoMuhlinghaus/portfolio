@@ -22,13 +22,17 @@ Pace.on("hide", function () {
                 $('#arrow-pulser').show().animateCss("fadeInDown");
                 $('section.page1').show();
                 $('section.page2').show();
+                var loop = true;
                 if($(window).width() > 760){
                     $('section.page3').show();
+                    loop = true;
                 }
                 else{
                     $('section.page3').remove();
+                    loop = false;
                 }
                 //Lancement de la one page scroll
+
                 $(".main").onepage_scroll({
                     sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
                     easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
@@ -40,7 +44,7 @@ Pace.on("hide", function () {
                     },  // This option accepts a callback function. The function will be called before the page moves.
                     afterMove: function (index) {
                     },   // This option accepts a callback function. The function will be called after the page moves.
-                    loop: true,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+                    loop: loop,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
                     keyboard: true,                  // You can activate the keyboard controls
                     // responsiveFallback: 1050,        // You can fallback to normal page scroll by defining the width of the browser in which
                     // you want the responsive fallback to be triggered. For example, set this to 600 and whenever

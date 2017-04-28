@@ -250,7 +250,7 @@ body.pace-running {
     @media (max-width: 32rem) {
       .main section.page1 .container img {
         width: 50%;
-        margin: 35px auto; } }
+        margin: 30px auto 5px; } }
   .main section.page1 .container .socials {
     display: flex;
     flex-direction: row;
