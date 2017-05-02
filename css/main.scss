@@ -244,7 +244,6 @@ body.pace-running{
       justify-content: center;
     }
 
-
     .logo{
       cursor: pointer;
       margin: 0 2%;
@@ -255,9 +254,12 @@ body.pace-running{
         margin-left: 10px;
       }
 
-      h2{
-        font-size: 2em;
-        margin: 0;
+      img{
+        width: 65px;
+
+        @include break(sm) {
+          width: 45px;
+        }
       }
     }
 

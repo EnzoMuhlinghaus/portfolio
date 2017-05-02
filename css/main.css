@@ -157,9 +157,11 @@ body.pace-running {
         .top-bar .icons .logo {
           margin-right: 0;
           margin-left: 10px; } }
-      .top-bar .icons .logo h2 {
-        font-size: 2em;
-        margin: 0; }
+      .top-bar .icons .logo img {
+        width: 65px; }
+        @media (max-width: 48rem) {
+          .top-bar .icons .logo img {
+            width: 45px; } }
     .top-bar .icons .social-icon {
       opacity: 0;
       display: flex;
