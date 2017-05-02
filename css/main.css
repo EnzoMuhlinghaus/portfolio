@@ -151,17 +151,14 @@ body.pace-running {
         justify-content: center; } }
     .top-bar .icons .logo {
       cursor: pointer;
-      margin: 0 2%;
+      margin: 0 2% 0 1%;
       display: none; }
       @media (max-width: 48rem) {
         .top-bar .icons .logo {
           margin-right: 0;
           margin-left: 10px; } }
       .top-bar .icons .logo img {
-        width: 65px; }
-        @media (max-width: 48rem) {
-          .top-bar .icons .logo img {
-            width: 45px; } }
+        width: 55px; }
     .top-bar .icons .social-icon {
       opacity: 0;
       display: flex;
