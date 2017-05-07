@@ -312,6 +312,9 @@ body.pace-running {
       margin-bottom: 15px;
       position: relative;
       border-radius: 5px; }
+      @media (max-height: 760px) {
+        .main section.page2 .mySkills .skills div {
+          padding: 5px; } }
       .main section.page2 .mySkills .skills div span {
         background-color: #e97479;
         position: absolute;

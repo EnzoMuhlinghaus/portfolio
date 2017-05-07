@@ -418,6 +418,10 @@ body.pace-running{
         position: relative;
         border-radius: 5px;
 
+        @media (max-height: 760px) {
+          padding: 5px;
+        }
+
         span {
           background-color: $couleurSkills;
           position: absolute;
