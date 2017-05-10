@@ -18,6 +18,8 @@
     "gulp-clean": "^0.3.2",
     "gulp-clean-css": "^2.3.2",
     "gulp-filter": "^5.0.0",
+    "gulp-htmlclean": "^2.7.14",
+    "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.1.1",
     "gulp-less": "^3.3.0",
     "gulp-livereload": "^3.8.1",

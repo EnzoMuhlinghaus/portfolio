@@ -8,6 +8,8 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     zip = require('gulp-zip'),
     plumber = require('gulp-plumber'),
+    gulpif = require('gulp-if'),
+    htmlclean = require('gulp-htmlclean'),
     livereload  = require('gulp-livereload');
 
 var jsFilter = filter('**/*.js', {restore: true});
@@ -38,14 +40,14 @@ gulp.task('default', ['sass', 'clean'], function () {
         .pipe(gulp.dest('dist/'));
     return gulp.src('*.html')
         .pipe(useref())
-        // Minify Js
-        .pipe(jsFilter)
-        .pipe(uglify())
-        .pipe(jsFilter.restore)
-        // Minify Css
-        .pipe(cssFilter)
-        .pipe(cleanCSS())
-        .pipe(cssFilter.restore)
+        // Minify css and js
+        .pipe(gulpif('*.js', uglify()))
+        .pipe(gulpif('*.css', cleanCSS()))
+        // Minify Html
+        .pipe(htmlclean({
+            protect: /<\!--%fooTemplate\b.*?%-->/g,
+            edit: function(html) { return html.replace(/\begg(s?)\b/ig, 'omelet$1'); }
+        }))
         .pipe(gulp.dest('dist'))
 });
 
