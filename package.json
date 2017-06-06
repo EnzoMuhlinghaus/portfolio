@@ -1,18 +1,18 @@
 {
-  "name": "thepadlocks",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "The Padlocks official website.",
+  "description": "My Portfolio.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://enzo_muhlinghaus@bitbucket.org/enzo_muhlinghaus/thepadlocks.git"
+    "url": "git+https://github.com/EnzoMuhlinghaus/portfolio.git"
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/enzo_muhlinghaus/thepadlocks#readme",
+  "homepage": "https://github.com/EnzoMuhlinghaus/portfolio",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
