@@ -365,7 +365,6 @@ body.pace-running{
 
     @include break(md) {
       width: 75%;
-      justify-content: center;
     }
 
     .please{
@@ -373,6 +372,7 @@ body.pace-running{
       color: $blanc;
       display: none;
       text-align: center;
+      margin-top: 70px ;
 
       @include break(sm){
         display: block;
@@ -391,7 +391,7 @@ body.pace-running{
         width: 190px;
       }
 
-      &#hover-me:after {
+      &.hover-me:after {
         content: url(../img/hover-me-left.png);
         position: absolute;
         bottom: 10px;
@@ -418,8 +418,12 @@ body.pace-running{
         position: relative;
         border-radius: 5px;
 
-        @media (max-height: 760px) {
+        @media (max-height: 860px) {
           padding: 5px;
+        }
+
+        @media (max-height: 700px) {
+          padding: 1px;
         }
 
         span {
@@ -448,6 +452,12 @@ body.pace-running{
 
 .main section.page3 {
 
+  h2 {
+    @include break(md) {
+      margin: 70px 25px auto;
+    }
+  }
+
   .myProjects{
     width: 1300px;
     display: flex;
@@ -463,13 +473,14 @@ body.pace-running{
 
     @include break(md) {
       width: 90%;
+      margin-top: 80px;
     }
 
     .project{
       margin: 10px 2%;
       position: relative;
 
-      &#hover-me:after {
+      &.hover-me:after {
         content: url(../img/hover-me-left.png);
         position: absolute;
         bottom: 10px;
@@ -481,6 +492,10 @@ body.pace-running{
 
         img{
           width: 500px;
+
+          @include break(lg) {
+            width: 300px;
+          }
         }
 
         figcaption {
