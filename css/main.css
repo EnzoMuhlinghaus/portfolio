@@ -34,6 +34,34 @@
 #hi, section.page1, section.page2, section.page3 {
   display: none; }
 
+.sticky-cv {
+  display: none;
+  position: fixed !important;
+  background: #4183c4;
+  bottom: 50px;
+  left: 50px;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1px black, 0 0 6px 3px rgba(0, 0, 0, 0.32);
+  color: white;
+  transition: all 400ms;
+  font-size: 1.2rem; }
+  @media (max-width: 72rem) {
+    .sticky-cv {
+      bottom: 30px;
+      left: 30px; } }
+  .sticky-cv i {
+    font-size: 1.7rem; }
+  .sticky-cv:hover {
+    background-color: #2c5d8d; }
+
 html {
   font-family: 'Muli', sans-serif;
   background-repeat: no-repeat;

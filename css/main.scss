@@ -82,6 +82,40 @@ $breakpoints: (
   display: none;
 }
 
+.sticky-cv{
+  display: none;
+  position: fixed !important;
+  background: $color-github;
+  bottom: 50px;
+  left: 50px;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1px black, 0 0 6px 3px rgba(0, 0, 0, 0.32);
+  color: white;
+  transition: all 400ms;
+  font-size: 1.2rem;
+
+  @include break(md) {
+    bottom: 30px;
+    left: 30px;
+  }
+
+  i{
+    font-size: 1.7rem;
+  }
+
+  &:hover{
+    background-color: darken($color-github, 15);
+  }
+}
+
 html{
   font-family: 'Muli', sans-serif;
   background-repeat: no-repeat;

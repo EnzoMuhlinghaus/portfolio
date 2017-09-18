@@ -72,7 +72,7 @@
                     <p id="welcome">Welcome to my personal portfolio.<br>Here you can find some of my work as a full stack developer.</p>
                     <h1 id="sign">Enzo Muhlinghaus</h1>
                 </div>
-                <button id="arrow-pulser" class="scroll-block active">
+                <button class="arrow-pulser scroll-block active">
                     <div class="scroll-text">
                         <img class="up" src="img/arrow_keyboard_up.png" alt="up">
                         <img class="down" src="img/arrow_keyboard_down.png" alt="down">
@@ -87,8 +87,14 @@
                     <p> I'm currently in my third year of the professional degree <a href="http://www.iut-valence.fr/lp-casir">CASIR</a> working as an apprentice at <a href="http://www.batiactugroupe.com/fr">Batiactu Groupe</a>.
                         I’m using Magento in my work essentially but I've used Django, Ruby On Rails, Symfony and a lot more in my personal / school projects.
                         I'm also learning Laravel, OctoberCMS and some front-end stuff like VueJs, Sass, Webpack...</p>
-                    <p>You can download my resume <a target="_blank" href="CV.pdf">here</a> ! :)</p>
                 </div>
+                <button class="arrow-pulser scroll-block active">
+                    <div class="scroll-text">
+                        <img class="up" src="img/arrow_keyboard_up.png" alt="up">
+                        <img class="down" src="img/arrow_keyboard_down.png" alt="down">
+                    </div>
+                    <div class="scroller-arrow"></div>
+                </button>
             </section>
             <section class="page2">
                 <h2>My Skills</h2>
@@ -193,6 +199,13 @@
                         <p>Please, visit my portfolio on a larger screen to see all my skills and projects.</p>
                     </div>
                 </div>
+                <button class="arrow-pulser scroll-block active">
+                    <div class="scroll-text">
+                        <img class="up" src="img/arrow_keyboard_up.png" alt="up">
+                        <img class="down" src="img/arrow_keyboard_down.png" alt="down">
+                    </div>
+                    <div class="scroller-arrow"></div>
+                </button>
             </section>
             <section class="page3">
                 <h2>My Projects</h2>
@@ -252,6 +265,10 @@
                 </div>
             </section>
         </div>
+
+        <a class="sticky-cv" tooltip="My resume !" target="_blank" href="CV.pdf">
+            <i class="fa fa-file-text" aria-hidden="true"></i>
+        </a>
 
         <!-- build:js js/min.js -->
         <script src="js/jquery-3.1.0.min.js"></script>

@@ -19,7 +19,7 @@ Pace.on("hide", function () {
             $("#sign").fadeIn().animateCss("fadeInUp");
             setTimeout(function(){
                 $('.logo').show().animateCss("fadeInRight");
-                $('#arrow-pulser').show().animateCss("fadeInDown");
+                $('.arrow-pulser').show().animateCss("fadeInDown");
                 $('section.page1').show();
                 $('section.page2').show();
                 var loop = true;
@@ -44,7 +44,7 @@ Pace.on("hide", function () {
                     },  // This option accepts a callback function. The function will be called before the page moves.
                     afterMove: function (index) {
                     },   // This option accepts a callback function. The function will be called after the page moves.
-                    loop: loop,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+                    loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
                     keyboard: true,                  // You can activate the keyboard controls
                     // responsiveFallback: 1050,        // You can fallback to normal page scroll by defining the width of the browser in which
                     // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
@@ -57,6 +57,7 @@ Pace.on("hide", function () {
                 $(".onepage-pagination > li:nth-child(2)").children().append('<span>About me</span>');
                 $(".onepage-pagination > li:nth-child(3)").children().append('<span>Skills</span>');
                 $(".onepage-pagination > li:nth-child(4)").children().append('<span>Projects</span>');
+                $('.sticky-cv').css("display", "flex").animateCss("fadeInUp");
                 setTimeout(function () {
                     $('.social-icon').each(function (index) {
                         var $this = $(this);
@@ -73,7 +74,7 @@ Pace.on("hide", function () {
 $(document).ready(function(){
 
     //arrow navigation
-    $('#arrow-pulser').on('click', function() {
+    $('.arrow-pulser').on('click', function() {
         $(".main").moveDown();
     });
 
